@@ -1,0 +1,28 @@
+mixin button(text, suffix, type)
+    button.button(type=type class=suffix ? `button--${suffix}` : '')&attributes(attributes)=text
+
+mixin button-link(text, suffix, href='javascript:void(0)')
+    a.button(href=href class=suffix ? `button--${suffix}` : '')&attributes(attributes)=text
+
+mixin link(text, href, suffix=false)
+    a.link(href=href class=suffix ? `link-${suffix}` : '')=text
+
+mixin link-icon(text, iconType, href='javascript:void(0)')
+    include ../icon/icon
+    a.link-icon(href=href)&attributes(attributes)
+        +icon(iconType)
+        span=text
+
+mixin link-video(img, href)
+    include ../icon/icon
+    .link-video.js-video-gallery(style=`background-image: url(${img})`)
+        a.link-video__icon.js-video-gallery-item(href=href)
+            +icon('play', ['icon-play--big'])
+
+mixin field(name, placeholder, hintText = null, modifLabel=null)
+    label.field.js-field(class=modifLabel)
+        span.field__placeholder
+            span.field__placeholder-text=placeholder
+            if hintText
+                +hint(hintText)
+        input.field__input.js-field-input(name=name type=type)&attributes(attributes)

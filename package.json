@@ -45,6 +45,7 @@
         "gulp-imagemin": "~6.0.0",
         "gulp-plumber": "^1.2.0",
         "gulp-pug": "^4.0.1",
+        "gulp-pugbem": "^2.2.4",
         "gulp-rename": "^1.2.2",
         "gulp-replace": "^1.0.0",
         "gulp-sass": "~4.0.2",
@@ -60,6 +61,7 @@
         "imagemin-webp": "^5.0.0",
         "imagemin-zopfli": "^6.0.0",
         "lint-staged": "^10.0.3",
+        "prettier": "^1.19.1",
         "require-dir": "^1.2.0",
         "stylelint": "^10.0.1",
         "stylelint-order": "^3.0.0",
@@ -69,6 +71,7 @@
         "yargs": "~13.2.4"
     },
     "dependencies": {
+        "jquery": "^3.4.1",
         "smart-grid": "^2.1.2"
     },
     "husky": {

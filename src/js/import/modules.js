@@ -1,2 +1,6 @@
-import "%modules%/header/header";
-import "%modules%/footer/footer";
+import $ from "jquery";
+import Header from "%modules%/header/header";
+
+$(() => {
+    new Header();
+});

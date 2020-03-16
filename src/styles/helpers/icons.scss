@@ -1,0 +1,62 @@
+@import "icons-data";
+@import "mixins";
+
+.icon {
+    @include outline-none;
+    @include transitionEaseOutQuint(background);
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon-search {
+    @include wh(20px);
+    @include icon-bgc(icon-search());
+}
+
+.icon-location {
+    @include wh(24px);
+    @include icon-bgc(icon-location());
+}
+
+.icon-phone {
+    @include wh(20px);
+    @include icon-bgc(icon-phone());
+}
+
+.icon-mobile-menu {
+    @include icon-mobile-menu(3px, 28px);
+    cursor: pointer;
+    background-color: $button-color;
+    margin: auto 4px auto auto;
+
+
+    &:before {
+        @include icon-mobile-menu-before(3px, 28px, -9px);
+    }
+
+    &:after {
+        @include icon-mobile-menu-after(3px, 20px, 9px);
+    }
+
+    &.active {
+        transition: 0.5s;
+        background: transparent;
+
+        &:before {
+            width: 28px;
+            transform: rotateZ(45deg) translate(6px, 7px);
+        }
+
+        &:after {
+            width: 28px;
+            transform: rotateZ(-45deg) translate(6px, -7px);
+        }
+    }
+
+    &.active-fixed {
+        position: fixed;
+        z-index: 101;
+        top: 25px;
+        right: 20px;
+    }
+}

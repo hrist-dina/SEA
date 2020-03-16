@@ -1,0 +1,4 @@
+//- Блок иконки сайта
+
+mixin icon(type, classes = [], attr = [])
+    i.icon(class=[`icon-${type}`, ...classes])&attributes(attr, attributes)

@@ -1,11 +1,13 @@
-extends layouts/default
-include helpers/mixins
+extends layouts/pages
 
 block variables
-	- const title = "gulp-pug-starter"
+    - const title = "СЭА"
 
 block content
-
-block scripts
-	script(src="js/main.js")
-	script(src="js/vendor.js")
+    .container
+        h1=title
+        ul
+            li
+                a(href="main.html") Главная
+            li
+                a(href="services.html") Услуги

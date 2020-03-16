@@ -1,0 +1,19 @@
+.search {
+
+    &__form {
+        display: none;
+    }
+
+    &__input {
+        @include outline-none();
+        box-sizing: border-box;
+        width: 100%;
+        border: none;
+        padding: 6px 52px 6px 48px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #898989;
+        background: #f8f8f8 url(icon-search()) no-repeat 16px;
+        background-size: 20px;
+    }
+}

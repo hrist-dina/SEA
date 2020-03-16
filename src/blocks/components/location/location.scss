@@ -1,0 +1,23 @@
+.location {
+    &__link {
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 24px;
+        color: $header-top-color;
+    }
+
+    &__text {
+        position: relative;
+    }
+
+    &__icon {
+        margin-right: 16px;
+        line-height: 0;
+    }
+
+    &__modal {
+        display: none;
+    }
+}

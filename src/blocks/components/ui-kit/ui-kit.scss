@@ -1,0 +1,124 @@
+$button-search-width: 106px;
+
+.button {
+    @include outline-none();
+    box-sizing: border-box;
+    display: flex;
+    border: none;
+    padding: 12px 32px;
+    background: $button-color;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $button-color-text;
+    text-decoration: none;
+
+    &:disabled {
+        opacity: .3;
+        cursor: not-allowed;
+    }
+
+    &:hover {
+        background: $button-color;
+    }
+
+    &--full {
+        width: 100%;
+    }
+}
+
+
+.link-icon {
+    font-size: 14px;
+    line-height: 18px;
+    color: #a7afb4;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+
+    & span {
+        display: inline-block;
+        margin-left: 8px;
+    }
+}
+
+
+.field-select, .field {
+    box-sizing: content-box;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 54px;
+    background: #fff;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 8px;
+
+    &__placeholder {
+        @include transitionEaseOutQuint((top, font-size));
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        z-index: 1;
+        top: 18px;
+        left: 0;
+        width: 100%;
+        font-size: 18px;
+        line-height: 27px;
+        color: #a7afb4;
+        cursor: pointer;
+
+        &-text {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        & .hint {
+            margin-left: 5px;
+        }
+    }
+
+    &__input {
+        @include outline-none;
+        width: 100%;
+        height: 27px;
+        border: none;
+        background: transparent;
+        font-size: 18px;
+        line-height: 27px;
+        color: #242322;
+
+        &[type=number]:not(:focus)::-webkit-inner-spin-button, &[type=number]:not(:focus)::-webkit-outer-spin-button {
+            margin: 0;
+            -webkit-appearance: none;
+        }
+    }
+
+    &.active &__placeholder {
+        top: 0;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
+
+.field {
+    &--date {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: auto;
+            margin: auto;
+            //@extend .icon-calendar;
+        }
+    }
+}

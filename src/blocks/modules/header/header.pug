@@ -1,0 +1,31 @@
+include ../../components/location/location
+include ../../components/phones-block/phones-block
+include ../../components/back-call/back-call
+include ../../components/logo/logo
+include ../../components/menu/menu
+include ../../components/search/search
+include ../../components/icon/icon
+
+mixin header
+    header.header.js-header
+        .container
+            .header__inner
+                .header__mobule-icon
+                    +icon('mobile-menu',['js-header-menu-open'])
+                .header__top
+                    .header__location
+                        +location
+                    .header__contacts
+                        .header__contacts-phones
+                            +phones-block
+                        .header__contacts-call
+                            +back-call
+                .header__middle
+                    .header__logo
+                        +logo
+                    .header__menu
+                        +menu
+                    .header__search
+                        +search
+
+

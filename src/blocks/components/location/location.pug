@@ -1,0 +1,14 @@
+include ../icon/icon
+
+//- Блок выбора города в header
+
+mixin location
+    .location
+        a(href='javascript:void(0)' data-modal-type='choice-city').location__link.js-modal-open
+            span.location__icon
+                +icon('location')
+            span.location__text Город:&nbsp;
+            span.location__text
+                | Барнаул
+        .location__modal
+            //include ../../modules/modals/choice-city

@@ -56,7 +56,9 @@ module.exports = {
     resolve: {
         alias: {
             "%modules%": path.resolve(__dirname, "src/blocks/modules"),
-            "%components%": path.resolve(__dirname, "src/blocks/components")
+            "%components%": path.resolve(__dirname, "src/blocks/components"),
+            "%classes%": path.resolve(__dirname, "src/js/classes"),
+            "%common%": path.resolve(__dirname, "src/js/common")
         }
     }
 };

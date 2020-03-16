@@ -1,0 +1,10 @@
+//- Блок телефонов header/footer
+
+mixin phones-block(modificator, modificatorPhoneLink)
+    .phones-block(class=modificator)
+        +phone-link('+7 (985) 784-84-28', modificatorPhoneLink)
+        +phone-link('+7 (495) 784-84-28 ', modificatorPhoneLink)
+
+
+mixin phone-link(phone, modificator)
+    a.phone-link(href=`tel:${phoneReplace(phone)}` class=modificator)=phone

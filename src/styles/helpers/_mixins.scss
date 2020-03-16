@@ -1,0 +1,115 @@
+@mixin wh($w, $h:$w) {
+    width: $w;
+    height: $h;
+}
+
+@mixin xxl-block {
+    @include from($break_xxl) {
+        @content;
+    }
+}
+
+@mixin icon-bgc($icon-data) {
+    background: url($icon-data) no-repeat center;
+    background-size: contain;
+}
+
+@mixin icon-mobile-menu($height, $width) {
+    position: relative;
+    width: $width;
+    height: $height;
+    transition-duration: 0.5s;
+}
+
+@mixin icon-mobile-menu-before($height, $width, $top, $bg-color: $button-color) {
+    content: "";
+    position: absolute;
+    top: $top;
+    width: $width;
+    height: $height;
+    transition-duration: 0.5s;
+    background-color: $bg-color;
+}
+
+@mixin icon-mobile-menu-after($height, $width, $top, $bg-color: $button-color) {
+    content: "";
+    position: absolute;
+    top: $top;
+    width: $width;
+    height: $height;
+    transition-duration: 0.5s;
+    background-color: $bg-color;
+}
+
+@mixin rotate($deg: 180deg) {
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin hover-link {
+    @include transitionEaseOutQuint(color);
+    &:hover {
+        color: #dc0000;
+    }
+}
+
+
+@mixin placeholder() {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    /* Firefox 19+ */
+    &:-moz-placeholder {
+        @content;
+    }
+    /* Firefox 18- */
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin outline-none() {
+    &:focus, &:active {
+        outline: none;
+    }
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+@mixin transition($property, $duration, $timing-function, $delay) {
+    -webkit-transition: $property $duration $timing-function $delay;
+    -moz-transition: $property $duration $timing-function $delay;
+    -o-transition: $property $duration $timing-function $delay;
+    transition: $property $duration $timing-function $delay;
+}
+
+@mixin transitionSomeProps($properties, $duration, $timing-function, $delay) {
+    $item: false;
+    @each $property in $properties {
+        @if $item {
+            $item: "#{$property $duration $timing-function $delay}, #{$item}";
+        }
+        @else {
+            $item: $property $duration $timing-function $delay;
+        }
+    }
+    -webkit-transition: #{$item};
+    -moz-transition: #{$item};
+    -o-transition: #{$item};
+    transition: #{$item};
+}
+
+@mixin transitionEaseOutQuint($properties, $duration: .6s, $delay:0s) {
+    @include transitionSomeProps($properties, $duration, cubic-bezier(0.23, 1, 0.32, 1), $delay);
+}

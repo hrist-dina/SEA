@@ -1,0 +1,140 @@
+.header {
+    @include md-block {
+        border-bottom: none;
+    }
+    border-bottom: 1px solid #f7f7f7;
+
+    &__mobule-icon {
+        @include md-block {
+            display: none;
+        }
+        display: flex;
+        width: 28px;
+        height: 25px;
+    }
+
+    &__inner {
+        @include md-block {
+            flex-direction: column;
+            align-items: inherit;
+            justify-content: flex-start;
+            padding: 0;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 19px 0 17px;
+    }
+
+    &__top {
+        @include xxl-block {
+            padding-top: 32px;
+            padding-bottom: 35px;
+        }
+
+        @include md-block {
+            order: inherit;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        order: 1;
+    }
+
+    &__middle {
+        @include md-block {
+            order: inherit;
+        }
+        display: flex;
+        align-items: center;
+        order: 0;
+    }
+
+    &__location {
+        @include md-block {
+            display: block;
+        }
+        display: none;
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+
+        &-phones {
+            @include md-block {
+                display: block;
+            }
+            display: none;
+        }
+
+        &-call {
+            @include md-block {
+                margin-left: 40px;
+            }
+
+            & .back-call {
+                @include to($break_md) {
+                    padding: 4px;
+                    line-height: 0;
+                }
+
+                &__icon {
+                    @include md-block {
+                        display: none;
+                    }
+                    display: block;
+                }
+
+                &__text {
+                    @include md-block {
+                        display: inline-block;
+                    }
+                    display: none;
+                }
+            }
+        }
+    }
+
+
+
+    &__logo {
+        margin-right: auto;
+        line-height: 0;
+    }
+
+    &__search {
+        @include xxl-block {
+            margin-left: 55px;
+        }
+        @include md-block {
+            display: block;
+            margin-left: 30px;
+        }
+        display: none;
+    }
+
+    &__menu {
+        @include xxl-block {
+            width: #{calc(100% - #{$logo-width-xxl})};
+        }
+
+        @include md-block {
+            display: flex;
+            justify-content: flex-end;
+            width: #{calc(100% - #{$logo-width})};
+        }
+
+        display: none;
+    }
+
+
+    & .container {
+        max-width: rem(1680);
+    }
+}
