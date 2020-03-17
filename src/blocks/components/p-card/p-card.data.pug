@@ -1,0 +1,27 @@
+include ../tags/tags.data.pug
+
+-
+    const pCards = [
+        {
+            img: 'img/publication/item.jpg',
+            date: '18 декабря 2019',
+            title: 'Как правильно подготовить материалы для назначения почерковедческой экспертизы',
+            tags: tags
+        },
+        {
+            img: 'img/publication/item.jpg',
+            date: '18 декабря 2019',
+            title: 'Полезная статья для чтения',
+            tags: tags
+        }
+    ];
+
+    getPCardList = (count) => {
+        let i = 0;
+        let list = [];
+        while (i < (count / pCards.length)) {
+            list = [...list, ...pCards]
+            i++;
+        }
+        return list.slice(0, count - list.length);
+    }

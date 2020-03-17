@@ -1,0 +1,7 @@
+
+mixin section(title, selectors)
+    section.section(class=selectors)
+        if title
+            .container
+                h2.section__title=title
+        block

@@ -1,0 +1,18 @@
+include ../tags/tags
+
+//- Карточка публикации
+
+mixin p-card(card)
+    .p-card
+        a(href='#').__pic
+            .__img(style=`background-image: url(${card.img})`)
+        .__date=card.date
+        a(href='#').__title=card.title
+        .__tags
+            +tags(card.tags)
+
+
+mixin p-card-list(pCardList)
+    .p-card-list
+        for pCard in pCardList
+            +p-card(pCard)

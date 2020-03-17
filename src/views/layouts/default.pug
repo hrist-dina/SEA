@@ -1,6 +1,7 @@
 include ../helpers/mixins
 include ../../blocks/modules/header/header
 include ../../blocks/modules/footer/footer
+include ../../blocks/modules/inner-page/inner-page
 block variables
 	include ../helpers/variables
 
@@ -14,7 +15,11 @@ html(lang="ru")
 				block header
 					+header
 				main
-					block content
+					if isInnerPage
+						+inner-page
+							block content
+					else
+						block content
 			block footer
 				+footer
 		block modals

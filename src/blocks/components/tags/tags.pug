@@ -1,0 +1,15 @@
+include tags.data.pug
+
+//- Блок тегов
+
+mixin tag(name)
+    li.tags__item
+        a(href='#').tags__name=name
+
+mixin tags(data)
+    if (!data)
+        - data = tags
+    ul.tags
+        for tag in data
+            +tag(tag)
+

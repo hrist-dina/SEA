@@ -1,0 +1,19 @@
+extends ../layouts/default
+include ../../blocks/components/section/section
+include ../../blocks/components/ui-kit/ui-kit
+
+block variables
+	include ../../blocks/components/p-card/p-card.data.pug
+	- const title = "Публикации";
+	- h1 = title
+	- isInnerPage = true
+	include ../data/inner
+
+block content
+	include ../../blocks/components/p-card/p-card
+	+section
+		+p-card-list(getPCardList(9))
+		.section__buttons
+			+button-link('Показать еще','transparent')(class='button--show-more')
+
+

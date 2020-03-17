@@ -1,6 +1,5 @@
 .breadcrumbs {
     list-style-type: none;
-    margin-bottom: 24px;
 
     &__link {
         text-decoration: none;
@@ -13,18 +12,18 @@
         }
         display: inline-block;
         position: relative;
-        font-size: 12px;
+        font-style: italic;
+        font-size: 13px;
         line-height: 16px;
-        color: $breadcrumbs;
+        color: #a9abb1;
     }
 
     &__item:not(:last-child):after {
         @include sm-block {
-            padding: 0 16px;
+            padding: 0 10px;
         }
-        content: "";
+        content: "/";
         display: inline-block;
-        padding: 0 12px;
-        @extend .icon-arrow-longest-next;
+        padding: 0 8px;
     }
 }

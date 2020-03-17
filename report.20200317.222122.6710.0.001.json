@@ -1,0 +1,700 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200317.222122.6710.0.001.json",
+    "dumpEventTime": "2020-03-17T22:21:22Z",
+    "dumpEventTimeStamp": "1584458482488",
+    "processId": 6710,
+    "cwd": "/home/andrey/Projects/frontend/sea",
+    "commandLine": [
+      "node",
+      "/home/andrey/Projects/frontend/sea/node_modules/.bin/gulp"
+    ],
+    "nodejsVersion": "v12.16.1",
+    "glibcVersionRuntime": "2.27",
+    "glibcVersionCompiler": "2.17",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "12.16.1",
+      "v8": "7.8.279.23-node.31",
+      "uv": "1.34.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.40.0",
+      "napi": "5",
+      "llhttp": "2.0.4",
+      "http_parser": "2.9.3",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019c",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "lts": "Erbium",
+      "headersUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.16.1/node-v12.16.1.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "5.3.0-40-generic",
+    "osVersion": "#32~18.04.1-Ubuntu SMP Mon Feb 3 14:05:59 UTC 2020",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz",
+        "speed": 2428,
+        "user": 33600900,
+        "nice": 41200,
+        "sys": 8427900,
+        "idle": 365041100,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz",
+        "speed": 2109,
+        "user": 33661200,
+        "nice": 35200,
+        "sys": 8340400,
+        "idle": 135005600,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz",
+        "speed": 2397,
+        "user": 33939200,
+        "nice": 44600,
+        "sys": 8309900,
+        "idle": 134823200,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz",
+        "speed": 2354,
+        "user": 33853900,
+        "nice": 51600,
+        "sys": 8349000,
+        "idle": 134521600,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz",
+        "speed": 2509,
+        "user": 33736200,
+        "nice": 58300,
+        "sys": 8407400,
+        "idle": 134603700,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz",
+        "speed": 2773,
+        "user": 33603900,
+        "nice": 34200,
+        "sys": 8314700,
+        "idle": 134923100,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz",
+        "speed": 2324,
+        "user": 33319300,
+        "nice": 77700,
+        "sys": 8366800,
+        "idle": 135087300,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz",
+        "speed": 1999,
+        "user": 33222400,
+        "nice": 54900,
+        "sys": 8368600,
+        "idle": 135008200,
+        "irq": 0
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "enp5s0f2",
+        "internal": false,
+        "mac": "00:90:f5:f2:7c:6c",
+        "address": "192.168.0.9",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "br-c376b516e3a0",
+        "internal": false,
+        "mac": "02:42:28:9e:9b:5d",
+        "address": "172.22.0.1",
+        "netmask": "255.255.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "br-d3019a5e7228",
+        "internal": false,
+        "mac": "02:42:4d:69:e0:49",
+        "address": "10.100.0.1",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "enp5s0f2",
+        "internal": false,
+        "mac": "00:90:f5:f2:7c:6c",
+        "address": "fe80::403d:371b:8db2:f5cf",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 2
+      },
+      {
+        "name": "br-c376b516e3a0",
+        "internal": false,
+        "mac": "02:42:28:9e:9b:5d",
+        "address": "fe80::42:28ff:fe9e:9b5d",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 11
+      },
+      {
+        "name": "br-d3019a5e7228",
+        "internal": false,
+        "mac": "02:42:4d:69:e0:49",
+        "address": "fe80::42:4dff:fe69:e049",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 12
+      },
+      {
+        "name": "veth5b144bc",
+        "internal": false,
+        "mac": "ca:bd:29:e8:65:01",
+        "address": "fe80::c8bd:29ff:fee8:6501",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 16
+      },
+      {
+        "name": "veth72cd222",
+        "internal": false,
+        "mac": "b6:10:7f:4f:a4:c4",
+        "address": "fe80::b410:7fff:fe4f:a4c4",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 18
+      },
+      {
+        "name": "veth97120b7",
+        "internal": false,
+        "mac": "ea:32:4a:6e:23:c5",
+        "address": "fe80::e832:4aff:fe6e:23c5",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 20
+      },
+      {
+        "name": "veth1ee576d",
+        "internal": false,
+        "mac": "f6:1a:67:b1:4a:65",
+        "address": "fe80::f41a:67ff:feb1:4a65",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 22
+      },
+      {
+        "name": "veth80155b9",
+        "internal": false,
+        "mac": "9a:05:f5:d2:77:d7",
+        "address": "fe80::9805:f5ff:fed2:77d7",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 24
+      },
+      {
+        "name": "veth31d5cef",
+        "internal": false,
+        "mac": "2e:f1:23:cf:9d:75",
+        "address": "fe80::2cf1:23ff:fecf:9d75",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 26
+      },
+      {
+        "name": "veth26d732a",
+        "internal": false,
+        "mac": "da:67:20:d1:b3:ff",
+        "address": "fe80::d867:20ff:fed1:b3ff",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 28
+      },
+      {
+        "name": "vethed4333e",
+        "internal": false,
+        "mac": "16:8b:66:ee:9e:54",
+        "address": "fe80::148b:66ff:feee:9e54",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 30
+      },
+      {
+        "name": "vethece8a15",
+        "internal": false,
+        "mac": "76:d0:90:61:ba:e6",
+        "address": "fe80::74d0:90ff:fe61:bae6",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 32
+      },
+      {
+        "name": "veth85669cd",
+        "internal": false,
+        "mac": "0e:a4:28:97:9c:f6",
+        "address": "fe80::ca4:28ff:fe97:9cf6",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 34
+      },
+      {
+        "name": "vetha8b3080",
+        "internal": false,
+        "mac": "26:7e:3d:16:f6:3f",
+        "address": "fe80::247e:3dff:fe16:f63f",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 36
+      },
+      {
+        "name": "vethb190718",
+        "internal": false,
+        "mac": "42:29:8a:af:2b:e0",
+        "address": "fe80::4029:8aff:feaf:2be0",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 38
+      },
+      {
+        "name": "vethf804c93",
+        "internal": false,
+        "mac": "5e:ac:57:41:51:85",
+        "address": "fe80::5cac:57ff:fe41:5185",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 40
+      },
+      {
+        "name": "veth7c06318",
+        "internal": false,
+        "mac": "3e:17:28:85:5a:65",
+        "address": "fe80::3c17:28ff:fe85:5a65",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 42
+      },
+      {
+        "name": "veth1fdcf0d",
+        "internal": false,
+        "mac": "ce:98:9a:08:16:20",
+        "address": "fe80::cc98:9aff:fe08:1620",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 44
+      },
+      {
+        "name": "vethc04d3f8",
+        "internal": false,
+        "mac": "62:05:b0:3b:de:cd",
+        "address": "fe80::6005:b0ff:fe3b:decd",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 46
+      },
+      {
+        "name": "veth370e2ba",
+        "internal": false,
+        "mac": "fa:e7:65:b5:39:ae",
+        "address": "fe80::f8e7:65ff:feb5:39ae",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 48
+      },
+      {
+        "name": "veth1b9067d",
+        "internal": false,
+        "mac": "9a:5c:0f:d0:aa:dc",
+        "address": "fe80::985c:fff:fed0:aadc",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 50
+      },
+      {
+        "name": "vethb9f18f9",
+        "internal": false,
+        "mac": "0a:d7:06:25:d4:b1",
+        "address": "fe80::8d7:6ff:fe25:d4b1",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 52
+      },
+      {
+        "name": "veth5b5c723",
+        "internal": false,
+        "mac": "be:4c:b4:13:bb:69",
+        "address": "fe80::bc4c:b4ff:fe13:bb69",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 54
+      },
+      {
+        "name": "veth1591a85",
+        "internal": false,
+        "mac": "96:69:52:da:37:3e",
+        "address": "fe80::9469:52ff:feda:373e",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 56
+      },
+      {
+        "name": "veth3e783d4",
+        "internal": false,
+        "mac": "f6:db:7b:00:2c:19",
+        "address": "fe80::f4db:7bff:fe00:2c19",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 156
+      },
+      {
+        "name": "veth6ffc24a",
+        "internal": false,
+        "mac": "8e:f0:d1:d8:b7:aa",
+        "address": "fe80::8cf0:d1ff:fed8:b7aa",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 158
+      },
+      {
+        "name": "veth7634b6d",
+        "internal": false,
+        "mac": "2a:35:c7:77:22:6d",
+        "address": "fe80::2835:c7ff:fe77:226d",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 160
+      }
+    ],
+    "host": "andrey-Ubuntu"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000b278f5",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [gulp]"
+    },
+    {
+      "pc": "0x00000000009f13ec",
+      "symbol": "node::OnFatalError(char const*, char const*) [gulp]"
+    },
+    {
+      "pc": "0x0000000000b5da9e",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [gulp]"
+    },
+    {
+      "pc": "0x0000000000b5de19",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [gulp]"
+    },
+    {
+      "pc": "0x0000000000d0a765",
+      "symbol": " [gulp]"
+    },
+    {
+      "pc": "0x0000000000ce2690",
+      "symbol": "v8::internal::Factory::NewUninitializedFixedArray(int, v8::internal::AllocationType) [gulp]"
+    },
+    {
+      "pc": "0x0000000000e51b31",
+      "symbol": " [gulp]"
+    },
+    {
+      "pc": "0x0000000000e51de0",
+      "symbol": " [gulp]"
+    },
+    {
+      "pc": "0x0000000000ffaf1b",
+      "symbol": "v8::internal::Runtime_GrowArrayElements(int, unsigned long*, v8::internal::Isolate*) [gulp]"
+    },
+    {
+      "pc": "0x00000000013a71b9",
+      "symbol": " [gulp]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 1615478784,
+    "totalCommittedMemory": 1584757952,
+    "usedMemory": 1575838880,
+    "availableMemory": 601912544,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 33088,
+        "capacity": 32808,
+        "used": 32808,
+        "available": 0
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 3902552,
+        "capacity": 16759296,
+        "used": 0,
+        "available": 16759296
+      },
+      "old_space": {
+        "memorySize": 60702720,
+        "committedMemory": 59898944,
+        "capacity": 58849552,
+        "used": 56032816,
+        "available": 2816736
+      },
+      "code_space": {
+        "memorySize": 2002944,
+        "committedMemory": 1967168,
+        "capacity": 1645888,
+        "used": 1645888,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 3149824,
+        "committedMemory": 3149480,
+        "capacity": 2492880,
+        "used": 2492880,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 612671488,
+        "committedMemory": 612671488,
+        "capacity": 612579064,
+        "used": 612579064,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 544544,
+        "used": 544544,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 902512640,
+        "committedMemory": 902512640,
+        "capacity": 902510880,
+        "used": 902510880,
+        "available": 0
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 28.959,
+    "kernelCpuSeconds": 3.36254,
+    "cpuConsumptionPercent": 0.325003,
+    "maxRss": 1887567872,
+    "pageFaults": {
+      "IORequired": 204,
+      "IONotRequired": 1009611
+    },
+    "fsActivity": {
+      "reads": 168208,
+      "writes": 8104
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 21.0643,
+    "kernelCpuSeconds": 2.64712,
+    "cpuConsumptionPercent": 0.238426,
+    "fsActivity": {
+      "reads": 160352,
+      "writes": 1128
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "CLUTTER_IM_MODULE": "xim",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "TERMINAL_EMULATOR": "JetBrains-JediTerm",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "XDG_MENU_PREFIX": "gnome-",
+    "LANG": "ru_RU.UTF-8",
+    "DISPLAY": ":0",
+    "OLDPWD": "/home/andrey/.local/share/JetBrains/Toolbox/apps/PhpStorm/ch-0/193.6494.47/bin",
+    "GNOME_SHELL_SESSION_MODE": "ubuntu",
+    "APPIMAGE": "/home/andrey/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox",
+    "DESKTOP_AUTOSTART_ID": "10c8e13e50f6d6b107158441624563574800000065100018",
+    "USERNAME": "andrey",
+    "XDG_VTNR": "2",
+    "GIO_LAUNCHED_DESKTOP_FILE_PID": "7390",
+    "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
+    "XDG_SESSION_ID": "2",
+    "USER": "andrey",
+    "DESKTOP_SESSION": "ubuntu",
+    "QT4_IM_MODULE": "xim",
+    "TEXTDOMAINDIR": "/usr/share/locale/",
+    "PWD": "/home/andrey/Projects/frontend/sea",
+    "HOME": "/home/andrey",
+    "TEXTDOMAIN": "im-config",
+    "SSH_AGENT_PID": "6605",
+    "QT_ACCESSIBILITY": "1",
+    "XDG_SESSION_TYPE": "x11",
+    "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop",
+    "XDG_SESSION_DESKTOP": "ubuntu",
+    "GTK_MODULES": "gail:atk-bridge",
+    "WINDOWPATH": "2",
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash",
+    "QT_IM_MODULE": "xim",
+    "XMODIFIERS": "@im=ibus",
+    "IM_CONFIG_PHASE": "2",
+    "TOOLBOX_VERSION": "1.16.6319",
+    "XDG_CURRENT_DESKTOP": "ubuntu:GNOME",
+    "GPG_AGENT_INFO": "/run/user/1000/gnupg/S.gpg-agent:0:1",
+    "GIO_LAUNCHED_DESKTOP_FILE": "/home/andrey/.config/autostart/jetbrains-toolbox.desktop",
+    "SHLVL": "1",
+    "XDG_SEAT": "seat0",
+    "GDMSESSION": "ubuntu",
+    "APPDIR": "/tmp/.mount_jetbra1p2Ljq",
+    "GNOME_DESKTOP_SESSION_ID": "this-is-deprecated",
+    "LOGNAME": "andrey",
+    "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+    "XDG_RUNTIME_DIR": "/run/user/1000",
+    "XAUTHORITY": "/run/user/1000/gdm/Xauthority",
+    "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/etc/xdg",
+    "PATH": "/home/andrey/.yarn/bin:/home/andrey/.config/yarn/global/node_modules/.bin:/home/andrey/Projects/frontend/sea/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+    "SESSION_MANAGER": "local/andrey-Ubuntu:@/tmp/.ICE-unix/6510,unix/andrey-Ubuntu:/tmp/.ICE-unix/6510",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "OWD": "/home/andrey",
+    "GTK_IM_MODULE": "ibus",
+    "_": "/home/andrey/Projects/frontend/sea/node_modules/.bin/gulp",
+    "INIT_CWD": "/home/andrey/Projects/frontend/sea",
+    "VIPSHOME": "/target"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 16777216,
+      "hard": 16777216
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 1048576,
+      "hard": 1048576
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": "unlimited"
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 63544,
+      "hard": 63544
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "linux-vdso.so.1",
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/sharp.node",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libvips-cpp.so.42",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libvips.so.42",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libglib-2.0.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libgobject-2.0.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libpng16.so.16",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libz.so.1",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libtiff.so.5",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libjpeg.so.8",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libgmodule-2.0.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libexpat.so.1",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libgsf-1.so.114",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libxml2.so.2",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/liborc-0.4.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/liblcms2.so.2",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libgif.so.7",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/librsvg-2.so.2",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libgio-2.0.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libgdk_pixbuf-2.0.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libcairo.so.2",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libwebpmux.so.3",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libwebpdemux.so.2",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libwebp.so.7",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libexif.so.12",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libffi.so.6",
+    "/lib/x86_64-linux-gnu/librt.so.1",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libcairo-gobject.so.2",
+    "/lib/x86_64-linux-gnu/libresolv.so.2",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libpangocairo-1.0.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libpixman-1.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libpangoft2-1.0.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libharfbuzz.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libpango-1.0.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libgthread-2.0.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libfribidi.so.0",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libfontconfig.so.1",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libfreetype.so.6",
+    "/home/andrey/Projects/frontend/sea/node_modules/sharp/build/Release/../../vendor/lib/libcroco-0.6.so.3",
+    "/home/andrey/Projects/frontend/sea/node_modules/node-sass/vendor/linux-x64-72/binding.node"
+  ]
+}

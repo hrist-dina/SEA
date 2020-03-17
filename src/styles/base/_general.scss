@@ -8,7 +8,7 @@ body {
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: $base-font;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -39,4 +39,41 @@ body {
 .container {
     @include container();
     max-width: rem(1280);
+}
+
+.h1 {
+    font-family: $title-font;
+    font-weight: $bold;
+    color: #233D63;
+    font-size: 36px;
+    line-height: 48px;
+    @include sm-block {
+        font-size: 64px;
+        line-height: 80px;
+    }
+}
+
+.section {
+
+    &__breadcrumbs {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 40px;
+        @include sm-block {
+            margin-bottom: 64px;
+        }
+    }
+
+    &__buttons {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    &--inner-page {
+        padding: 32px 0 96px;
+    }
 }

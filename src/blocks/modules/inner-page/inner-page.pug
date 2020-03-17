@@ -1,0 +1,14 @@
+include ../../components/section/section
+include ../../components/breadcrumbs/breadcrumbs
+
+//- Модуль внутренних страниц
+
+mixin inner-page
+    +section(false, ['section--inner-page'])
+        .container
+            .section__breadcrumbs
+                +breadcrumbs(breadcrumbs)
+            .section__title
+                h1.h1=h1
+            .section__content
+                block

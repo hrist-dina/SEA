@@ -27,6 +27,30 @@ $button-search-width: 106px;
     &--full {
         width: 100%;
     }
+
+    &--transparent {
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(0, 123, 117, 0.3);
+        padding: 20px;
+        background: transparent;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #393e46;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &--show-more {
+        min-width: 280px;
+    }
 }
 
 
