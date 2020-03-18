@@ -1,8 +1,11 @@
 extends ../layouts/default
+include ../../blocks/components/services/services
 
 block variables
 	- const title = "Услуги";
+	- h1 = title
+	include ../data/inner
 
 block content
-	.container
-		p test
+	+services-section
+

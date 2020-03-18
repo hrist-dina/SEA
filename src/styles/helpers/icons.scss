@@ -60,3 +60,8 @@
         right: 20px;
     }
 }
+
+.icon-book {
+    @include wh(32px);
+    @include icon-bgc(icon-book());
+}

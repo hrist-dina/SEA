@@ -1,8 +1,8 @@
-include ../tags/tags
-
+include ../ui-kit/ui-kit
 //- Карточка публикации
 
 mixin p-card(card)
+    include ../tags/tags
     .p-card
         a(href='#').__pic
             .__img(style=`background-image: url(${card.img})`)
@@ -16,3 +16,12 @@ mixin p-card-list(pCardList)
     .p-card-list
         for pCard in pCardList
             +p-card(pCard)
+
+mixin p-card-section(title=false)
+    include p-card.data.pug
+    +section(title)
+        +p-card-list(getPCardList(9))
+        .section__buttons
+            +button-show-more
+
+

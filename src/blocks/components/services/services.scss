@@ -1,0 +1,43 @@
+.services {
+    @include sm-block {
+        margin-bottom: 80px;
+    }
+    margin-bottom: 40px;
+
+    &__list {
+        @include row-flex;
+        @include sm-block {
+            margin-bottom: -64px;
+        }
+        margin-bottom: -32px;
+    }
+
+    &__item {
+        @include sm-block {
+            font-size: 24px;
+            line-height: 34px;
+        }
+        @include col;
+        @include size-lg(4);
+        @include size-sm(6);
+        @include size(12);
+        @include sm-block {
+            margin-bottom: 64px;
+        }
+        font-size: 18px;
+        line-height: 30px;
+        color: #443e3e;
+        text-decoration: none;
+        margin-bottom: 32px;
+        display: inline-flex;
+    }
+
+    &__item-icon {
+        margin-right: 24px;
+        width: 32px;
+    }
+
+    &__item-title {
+        width: #{calc(100% - 60px)};
+    }
+}

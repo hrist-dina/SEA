@@ -1,0 +1,29 @@
+include ../icon/icon
+
+//- Блок с услугами
+
+mixin services(data)
+    include services.data.pug
+    if (!data)
+        - data = servicesList
+    .services
+        .__list
+            for service in data
+                +services-item(service)
+
+
+mixin services-item(item)
+    a(href='#').services__item
+        .services__item-icon
+            +icon('book')
+        .services__item-title=item
+
+mixin services-section(title=false)
+    +section(title)
+        +services
+        .section__buttons
+            +button-show-more
+
+
+
+

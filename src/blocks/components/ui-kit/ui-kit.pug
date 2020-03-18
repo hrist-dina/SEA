@@ -26,3 +26,6 @@ mixin field(name, placeholder, hintText = null, modifLabel=null)
             if hintText
                 +hint(hintText)
         input.field__input.js-field-input(name=name type=type)&attributes(attributes)
+
+mixin button-show-more
+    +button-link('Показать еще','transparent')(class='button--show-more')
