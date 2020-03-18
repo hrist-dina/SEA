@@ -28,4 +28,7 @@ mixin field(name, placeholder, hintText = null, modifLabel=null)
         input.field__input.js-field-input(name=name type=type)&attributes(attributes)
 
 mixin button-show-more
-    +button-link('Показать еще','transparent')(class='button--show-more')
+    +button-transparent('Показать еще')(class='button--show-more')
+
+mixin button-transparent(title)
+    +button-link(title,'transparent')&attributes(attributes)

@@ -1,0 +1,22 @@
+extends ../layouts/default
+include ../../blocks/components/p-detail/p-detail
+block variables
+	- const title = "Как правильно подготовить материалы для назначения почерковедческой экспертизы";
+	- h1 = title
+	-
+		breadcrumbsMiddle = [
+			{
+				name: 'Публикации',
+				link: '#'
+			}
+		];
+	include ../data/inner
+
+
+block content
+	+p-detail
+
+
+
+
+

@@ -1,10 +1,12 @@
 -
     isInnerPage = true
+    breadcrumbsMiddle = breadcrumbsMiddle ? breadcrumbsMiddle : []
     let breadcrumbs = [
         {
             name: 'Главная страница',
             link: '/'
         },
+        ...breadcrumbsMiddle,
         {
             name: h1,
             link: ''

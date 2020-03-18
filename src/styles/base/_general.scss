@@ -77,3 +77,60 @@ body {
         padding: 32px 0 96px;
     }
 }
+
+.text {
+    font-size: 18px;
+    line-height: 28px;
+    color: #393E46;
+
+    @include sm-block {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    p {
+        @include sm-block {
+            margin: 0 0 30px 0;
+        }
+        margin: 0 0 15px 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+        @include sm-block {
+            padding-left: 30px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        & li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 10px;
+
+            @include sm-block {
+                padding-left: 35px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 14px;
+                @include wh(8px);
+                background: #007B75;
+            }
+        }
+    }
+}
