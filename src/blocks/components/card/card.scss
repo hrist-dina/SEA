@@ -1,0 +1,104 @@
+.card {
+    @include size-lg(4);
+    @include size-sm(6);
+    @include size(12);
+    @include sm-block {
+        height: 520px;
+        margin-bottom: 48px;
+    }
+    display: inline-block;
+    max-width: 395px;
+    height: 440px;
+    text-decoration: none;
+    margin-bottom: 24px;
+
+    &.swiper-slide {
+        max-width: 85%;
+    }
+
+    &-slider {
+        @include to($break_sm) {
+            margin: 0 -15px;
+        }
+    }
+
+    &__inner {
+        @include wh(100%);
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        z-index: 0;
+        padding: 34px 24px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+        &:before {
+            @include wh(100%);
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            background: linear-gradient(0deg, rgba(26, 60, 64, 0.5), rgba(26, 60, 64, 0.5));
+        }
+    }
+
+    &__list {
+        &:not(.swiper-wrapper) {
+            @include row-flex;
+            justify-content: space-between;
+        }
+
+        &.swiper-wrapper {
+
+            @include to($break_sm) {
+                margin-left: 15px;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    &__tags {
+        
+        @include sm-block {
+            max-height: 200px;
+        }
+        max-height: 160px;
+        overflow: hidden;
+        margin-bottom: 16px;
+    }
+
+    &__title {
+
+        @include sm-block {
+            max-height: 200px;
+        }
+        max-height: 160px;
+        overflow: hidden;
+        text-decoration: none;
+        font-family: $title-font;
+        font-style: normal;
+        font-size: 22px;
+        line-height: 32px;
+        color: #fff;
+        margin-bottom: 16px;
+    }
+
+    &__counts {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 22px;
+        color: #cccccc;
+
+        &-text {
+            margin-left: 8px;
+        }
+    }
+
+    &:not(.swiper-slide) {
+        @include col;
+    }
+}

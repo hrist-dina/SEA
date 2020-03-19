@@ -1,7 +1,7 @@
 import SwiperBase from "%classes%/SwiperBase";
 
-export default class PCard extends SwiperBase {
-    constructor(selector = ".js-p-card") {
+export default class Card extends SwiperBase {
+    constructor(selector = ".js-card") {
         super(selector);
     }
     bindOptions() {
@@ -9,7 +9,7 @@ export default class PCard extends SwiperBase {
         this.prevEl = `${this.selector}-prev`;
         this.screenWidht = false;
         super.bindOptions({
-            spaceBetween: 30,
+            spaceBetween: 15,
             navigation: {
                 nextEl: this.nextEl,
                 prevEl: this.prevEl,
@@ -17,7 +17,7 @@ export default class PCard extends SwiperBase {
             breakpoints: {
                 // when window width is >= 580px
                 580: {
-                    spaceBetween: 60,
+                    spaceBetween: 48,
                 }
             }
         });

@@ -1,0 +1,11 @@
+extends ../layouts/default
+include ../../blocks/components/card/card
+
+block variables
+	- const title = "Карточки";
+	- h1 = title
+	include ../data/inner
+
+block content
+	+card-section
+

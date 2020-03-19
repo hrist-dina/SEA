@@ -2,6 +2,8 @@ extends ../layouts/default
 include ../../blocks/components/p-detail/p-detail
 include ../../blocks/components/p-card/p-card
 include ../../blocks/components/services/services
+include ../../blocks/components/card/card
+
 
 block variables
 	- const title = "Как правильно подготовить материалы для назначения почерковедческой экспертизы";
@@ -20,6 +22,7 @@ block content
 	+p-detail
 	+p-card-slider('Публикации')
 	+services-section('Наши услуги', false)
+	+card-slider('Карточки')
 
 
 

@@ -1,14 +1,17 @@
 //- Блок тегов
 
-mixin tag(name)
+mixin tag(name, isLink=true)
     li.tags__item
-        a(href='#').tags__name=name
+        if isLink
+            a(href='#').tags__name=name
+        else
+            span.tags__name=name
 
-mixin tags(data)
+mixin tags(data, isLink=true)
     include tags.data.pug
     if (!data)
         - data = tagsData
     ul.tags
         for tag in data
-            +tag(tag)
+            +tag(tag, isLink)
 

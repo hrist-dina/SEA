@@ -91,3 +91,7 @@
     }
 }
 
+.icon-cards {
+    @include wh(24px);
+    @include icon-bgc(icon-cards());
+}
