@@ -18,11 +18,12 @@ mixin services-item(item)
             +icon('book')
         .services__item-title=item
 
-mixin services-section(title=false)
+mixin services-section(title=false, showMore = true)
     +section(title)
         +services
-        .section__buttons
-            +button-show-more
+        if showMore
+            .section__buttons
+                +button-show-more
 
 
 

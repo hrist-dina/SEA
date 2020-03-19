@@ -1,7 +1,18 @@
+include ../icon/icon
 
 mixin section(title, selectors)
     section.section(class=selectors)
         if title
-            .container
-                h2.section__title=title
+            h2.h2.section__title=title
+        block
+
+mixin section-slider(title, sliderClass)
+    section.section&attributes(attributes)
+        if title
+            .__head
+                h2.h2.section__title=title
+                .__nav
+                    +icon('arrow-long-prev', ['swiper-button-prev', `${sliderClass}-prev`])
+                    +icon('arrow-long-next', ['swiper-button-next', `${sliderClass}-next`])
+
         block

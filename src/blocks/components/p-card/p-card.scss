@@ -1,5 +1,4 @@
 .p-card {
-    @include col;
     @include size-lg(4);
     @include size-sm(6);
     @include size(12);
@@ -7,6 +6,12 @@
         margin-bottom: 98px;
     }
     margin-bottom: 32px;
+
+    &:not(.swiper-slide) {
+        @include col;
+    }
+
+    max-width: 387px;
 
     &__pic {
         margin-bottom: 16px;
@@ -55,7 +60,18 @@
     }
 
     &-list {
-        @include row-flex;
-        list-style: none;
+        &:not(.swiper-wrapper) {
+            @include row-flex;
+            list-style: none;
+            justify-content: space-between;
+        }
+    }
+
+    &-slider {
+        & .p-card {
+            @include to($break_sm) {
+                max-width: 80%;
+            }
+        }
     }
 }

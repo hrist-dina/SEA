@@ -1,4 +1,8 @@
 .p-detail {
+    @include sm-block {
+        margin-bottom: 128px;
+    }
+    margin-bottom: 60px;
 
     &__img {
         @include sm-block {

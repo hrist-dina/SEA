@@ -65,3 +65,29 @@
     @include wh(32px);
     @include icon-bgc(icon-book());
 }
+
+.icon-arrow-long-next, .icon-arrow-long-prev {
+    @include wh(50px, 21px);
+    @include icon-bgc(icon-arrow-long());
+
+    @include transitionEaseOutQuint(all);
+    position: relative;
+    &.swiper-button-disabled {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+}
+
+.icon-arrow-long-prev {
+    &:active:not(.swiper-button-disabled) {
+        left: -5px;
+    }
+}
+
+.icon-arrow-long-next {
+    @include rotate();
+    &:active:not(.swiper-button-disabled) {
+        right: -5px;
+    }
+}
+

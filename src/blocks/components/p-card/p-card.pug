@@ -1,9 +1,9 @@
 include ../ui-kit/ui-kit
 //- Карточка публикации
 
-mixin p-card(card)
+mixin p-card(card, isSlider = false)
     include ../tags/tags
-    .p-card
+    .p-card(class=isSlider ? 'swiper-slide' : '')
         a(href='#').__pic
             .__img(style=`background-image: url(${card.img})`)
         .__date=card.date
@@ -12,10 +12,10 @@ mixin p-card(card)
             +tags(card.tags)
 
 
-mixin p-card-list(pCardList)
-    .p-card-list
+mixin p-card-list(pCardList, isSlider = false)
+    .p-card-list(class=isSlider ? 'swiper-wrapper' : '')
         for pCard in pCardList
-            +p-card(pCard)
+            +p-card(pCard, isSlider)
 
 mixin p-card-section(title=false)
     include p-card.data.pug
@@ -23,5 +23,14 @@ mixin p-card-section(title=false)
         +p-card-list(getPCardList(9))
         .section__buttons
             +button-show-more
+
+mixin p-card-slider(title=false, countList = 9)
+    include p-card.data.pug
+    +section-slider(title, 'js-p-card')
+        .p-card-slider.swiper-container.js-p-card
+            +p-card-list(getPCardList(countList), true)
+        .section__buttons
+            +button-transparent('Все публикации')(class='button--nav')
+
 
 

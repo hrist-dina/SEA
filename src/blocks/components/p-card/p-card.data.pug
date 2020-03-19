@@ -1,4 +1,4 @@
-//include ../tags/tags.data.pug
+include ../tags/tags.data.pug
 
 -
     const pCards = [
@@ -16,7 +16,7 @@
         }
     ];
 
-    getPCardList = (count) => {
+    const getPCardList = (count) => {
         let i = 0;
         let list = [];
         while (i < (count / pCards.length)) {
