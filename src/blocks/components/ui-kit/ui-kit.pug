@@ -13,6 +13,10 @@ mixin link-icon(text, iconType, href='javascript:void(0)')
         +icon(iconType)
         span=text
 
+mixin link-req-call(text, href='javascript:void(0)')
+    a.link-req-call(href=href)&attributes(attributes)
+        span=text
+
 mixin link-video(img, href)
     include ../icon/icon
     .link-video.js-video-gallery(style=`background-image: url(${img})`)

@@ -1,0 +1,12 @@
+
+//- Основное меню в footer
+
+mixin menu-footer(menuFooterList)
+    include menu-footer.data.pug
+    if !menuFooterList
+        - menuFooterList = menuFooter
+    nav.menu-footer
+        ul.__list
+            for item in menuFooterList
+                li.__item
+                    a(href='#').__link=item.name

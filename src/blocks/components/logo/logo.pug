@@ -1,5 +1,5 @@
 //- Логотип в header
 
-mixin logo
-    a(href='/').logo
+mixin logo(suffix)
+    a.logo(href='/' class=suffix ? `logo--${suffix}` : '')
         img(src='img/header/logo.svg')

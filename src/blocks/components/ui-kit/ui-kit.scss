@@ -56,6 +56,18 @@ $button-search-width: 106px;
         padding-left: 48px;
         padding-right: 48px;
     }
+
+    &--subscribe {
+        width: 142px;
+        background: #007b75;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 12px 18px;
+    }
 }
 
 
@@ -70,6 +82,21 @@ $button-search-width: 106px;
     & span {
         display: inline-block;
         margin-left: 8px;
+    }
+}
+
+.link-req-call {
+    @include transitionEaseOutQuint(border);
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #007b75;
+    border-bottom: 1px solid rgba(0, 123, 117, 0.3);
+    text-decoration: none;
+
+    &:hover {
+        border-bottom-color: transparent;
     }
 }
 

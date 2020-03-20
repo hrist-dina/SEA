@@ -12,10 +12,16 @@ $logo-width: 300px;
         max-width: $logo-width;
         height: 65px;
     }
+    
     display: inline-block;
     width: 100%;
     max-width: 183px;
     height: 34px;
+
+    body &--footer {
+        max-width: 320px;
+        height: auto;
+    }
 
     & img {
         max-width: 100%;

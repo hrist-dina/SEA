@@ -1,0 +1,10 @@
+include ../ui-kit/ui-kit
+
+
+mixin subscribe(title = 'Подпишитесь на рассылку')
+    .subscribe
+        if title
+            .__title=title
+        form.__form
+            input(type='email' name='email' placeholder='Электронная почта').__input
+            +button('Подписаться', 'subscribe', 'submit')

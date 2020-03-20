@@ -1,0 +1,32 @@
+.subscribe {
+
+    &__title {
+        font-size: 13px;
+        line-height: 27px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #64697a;
+        margin-bottom: 23px;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        @include outline-none;
+        @include placeholder {
+            color: rgba(0, 0, 0, 0.4);
+            opacity: 0.5;
+        }
+        box-sizing: border-box;
+        width: #{calc(100% - 142px)};
+        border: none;
+        padding: 8px 20px;
+        font-size: 14px;
+        line-height: 32px;
+        color: #64697a;
+        background: #f7f7f7;
+    }
+}

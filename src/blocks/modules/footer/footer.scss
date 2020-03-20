@@ -1,0 +1,130 @@
+.footer {
+
+    @include lg-block {
+        padding-top: 69px;
+        padding-bottom: 83px;
+    }
+    border-top: 1px solid #f0f0f0;
+    box-sizing: border-box;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__inner {
+    }
+
+    &__top {
+        @include row-flex;
+    }
+
+    &__left, &__right {
+        @include lg-block {
+            margin-bottom: 0;
+        }
+        margin-bottom: 24px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__left, &__menu, &__right {
+        @include col;
+        @include size-lg(4);
+        @include size(12);
+    }
+
+    &__logo {
+        margin-bottom: 16px;
+    }
+
+    &__address {
+        font-size: 14px;
+        line-height: 27px;
+        color: #393e46;
+        margin-bottom: 16px;
+    }
+
+    &__contacts {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__phones {
+        max-width: 140px;
+        margin-right: 16px;
+        margin-bottom: 10px;
+
+        & .phones-block {
+            flex-direction: column;
+        }
+
+        & .phone-link {
+            margin: auto;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000;
+        }
+    }
+
+    &__req-call {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    &__email {
+        & a {
+            @include transitionEaseOutQuint(border);
+            font-size: 16px;
+            line-height: 24px;
+            color: #64697a;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                border-bottom-color: #64697a;
+            }
+        }
+    }
+
+    &__subscibe, &__social {
+        margin-bottom: 24px;
+    }
+
+    &__policy {
+        line-height: 0;
+        & a {
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 20px;
+            color: #64697a;
+        }
+    }
+
+    &__bottom {
+        @include row-flex;
+        @include lg-block {
+            margin-top: 78px;
+        }
+
+        margin-top: 40px;
+    }
+
+    &__copyright {
+        @include col;
+        @include size-lg(7);
+        @include size(12);
+        font-size: 14px;
+        line-height: 20px;
+        color: #6e7677;
+    }
+
+    &__authors {
+        @include col;
+        @include size-lg(5);
+        @include size(12);
+        @include lg-block {
+            text-align: right;
+            margin-top: 0;
+        }
+        margin-top: 20px;
+    }
+}

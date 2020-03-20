@@ -1,6 +1,39 @@
-
+include ../../components/logo/logo
+include ../../components/phones-block/phones-block
+include ../../components/ui-kit/ui-kit
+include ../../components/menu-footer/menu-footer
+include ../../components/subscribe/subscribe
+include ../../components/social/social
+include ../../components/authors/authors
 
 mixin footer
     footer.footer
         .container
-            p footer
+            .footer__inner
+                .footer__top
+                    .footer__left
+                        .footer__logo
+                            +logo('footer')
+                        .footer__address Москва, Кузнецкий Мост 21/5, офис 5057 А
+                        .footer__contacts
+                            .footer__phones
+                                +phones-block
+                            .footer__req-call
+                                +link-req-call('Заказать звонок')
+                        .footer__email
+                            a(href='mailto:info@sudagent.ru') info@sudagent.ru
+                    .footer__menu
+                        +menu-footer
+                    .footer__right
+                        .footer__subscibe
+                            +subscribe
+                        .footer__social
+                            +social
+                        .footer__policy
+                            a(href='#') Политика конфиденциальности
+
+                .footer__bottom
+                    .footer__copyright 2020 © Автономная некоммерческая организация «Судебно-экспертное агентство»
+                    .footer__authors
+                        +authors
+

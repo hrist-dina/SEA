@@ -1,0 +1,17 @@
+.social {
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        line-height: 0;
+        text-decoration: none;
+        margin-right: 16px;
+        display: inline-block;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

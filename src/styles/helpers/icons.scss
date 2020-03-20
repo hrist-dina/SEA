@@ -95,3 +95,17 @@
     @include wh(24px);
     @include icon-bgc(icon-cards());
 }
+
+.icon-fb {
+    @include wh(48px);
+    @include icon-bgc(icon-fb());
+    background-color: #3b5998;
+    background-size: 24px;
+}
+
+.icon-telegram {
+    @include wh(48px);
+    @include icon-bgc(icon-telegram());
+    background-color: #039be5;
+    background-size: 24px;
+}

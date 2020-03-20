@@ -1,0 +1,35 @@
+.authors {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+
+    &__text {
+        font-size: 14px;
+        line-height: 20px;
+        color: #6e7677;
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    &:hover &__hand {
+        transform-origin: 5px 10px;
+        animation: swing-hand 1s;
+    }
+}
+
+@keyframes swing-hand {
+    0% {
+        @include rotate(0);
+    }
+
+    50% {
+        @include rotate(-25deg);
+    }
+
+    100% {
+        @include rotate(0);
+    }
+}
