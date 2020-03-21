@@ -1,11 +1,21 @@
 extends ../layouts/default
-include ../../blocks/components/logo-3d/logo-3d
+include ../../blocks/components/first-screen/first-screen
+include ../../blocks/components/p-card/p-card
+include ../../blocks/components/services/services
+include ../../blocks/components/card/card
+include ../../blocks/components/services-all/services-all
+include ../../blocks/components/features/features
 
 block variables
 	- const title = "Главная";
 
 block content
+	+first-screen
 	.container
-		+logo-3d
+		+services-section('Наши услуги', false, true)
+		+services-all-section
+		+features-section
+		+p-card-slider('Публикации')
+		+card-slider('Карточки')
 
 

@@ -29,3 +29,7 @@
 @function icon-telegram($color: 'fff') {
     @return "data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.93125 10.4311L20.668 3.08985C21.4912 2.77059 22.2102 3.30543 21.9435 4.64169L21.945 4.64005L18.925 19.9133C18.7012 20.9961 18.1018 21.2594 17.2632 20.7493L12.6642 17.1107L10.446 19.4048C10.2007 19.6681 9.99376 19.8902 9.51853 19.8902L9.84506 14.8661L18.3685 6.60001C18.7395 6.24949 18.2857 6.05201 17.7967 6.40089L7.2635 13.5199L2.72277 11.9994C1.73705 11.6637 1.71559 10.9412 2.93125 10.4311Z' fill='%23fff'/%3E%3C/svg%3E%0A";
 }
+
+@function icon-arrow-down($color: '233D63') {
+    @return "data:image/svg+xml,%3Csvg width='20' height='29' viewBox='0 0 20 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.99923 1.69226V27.0109' stroke='%23#{$color}' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M18.0879 18.9231L10 27.011L1.91211 18.9231' stroke='%23#{$color}' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A";
+}

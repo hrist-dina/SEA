@@ -52,6 +52,15 @@ $button-search-width: 106px;
         min-width: 280px;
     }
 
+    &--show-all {
+        @include sm-block {
+            width: auto;
+            min-width: 250px;
+        }
+        box-sizing: border-box;
+        width: 100%;
+    }
+
     &--nav {
         padding-left: 48px;
         padding-right: 48px;
@@ -67,6 +76,14 @@ $button-search-width: 106px;
         text-transform: uppercase;
         color: #fff;
         padding: 12px 18px;
+    }
+
+    &--square {
+        @include wh(64px);
+        box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 

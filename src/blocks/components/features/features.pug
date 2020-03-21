@@ -1,0 +1,32 @@
+include ../ui-kit/ui-kit
+include ../section/section
+
+//- Блок "Почему нас выбирают" на главной
+
+mixin features
+    .features
+        .__inner
+            .__img(style='background-image: url(img/features/bg.jpg)')
+            .__data
+                .__title Почему нас выбирают?
+                ul.__list
+                    li.__item
+                        span.__number 10
+                        span.__text Стаж экспертов более
+                            br
+                            | лет
+                    li.__item
+                        span.__number 30
+                        span.__text видов экспертиз
+                    li.__item
+                        span.__number 50
+                        span.__text Более
+                            br
+                            | профессионалов в команде
+                .__button
+                    +button-transparent('Подробнее')(class='button--nav')
+
+mixin features-section
+    +section
+        +features
+

@@ -2,7 +2,8 @@ mixin button(text, suffix, type)
     button.button(type=type class=suffix ? `button--${suffix}` : '')&attributes(attributes)=text
 
 mixin button-link(text, suffix, href='javascript:void(0)')
-    a.button(href=href class=suffix ? `button--${suffix}` : '')&attributes(attributes)=text
+    a.button(href=href class=suffix ? `button--${suffix}` : '')&attributes(attributes)=text ? text :''
+        block
 
 mixin link(text, href, suffix=false)
     a.link(href=href class=suffix ? `link-${suffix}` : '')=text
@@ -36,3 +37,8 @@ mixin button-show-more
 
 mixin button-transparent(title)
     +button-link(title,'transparent')&attributes(attributes)
+        block
+
+mixin button-arrow-down
+    +button-transparent(false)(class='button--square')
+        +icon('arrow-down')

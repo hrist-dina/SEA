@@ -109,3 +109,8 @@
     background-color: #039be5;
     background-size: 24px;
 }
+
+.icon-arrow-down {
+    @include wh(20px,29px);
+    @include icon-bgc(icon-arrow-down());
+}

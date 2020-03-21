@@ -1,0 +1,65 @@
+.services-all {
+    background-color: #f7f7f7;
+    position: relative;
+
+    &__inner {
+        @include lg-block {
+            padding: 70px 80px;
+        }
+        @include sm-block {
+            padding: 30px;
+        }
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+    }
+
+    &__text {
+        @include lg-block {
+            font-size: 35px;
+            line-height: 50px;
+            max-width: 700px;
+
+            & br {
+                display: block;
+            }
+        }
+        & br {
+            display: none;
+        }
+        font-family: $title-font;
+        font-size: 25px;
+        line-height: 36px;
+        color: #233d63;
+        margin-bottom: 32px;
+    }
+
+    &__decor {
+        @include lg-block {
+            position: absolute;
+            z-index: 0;
+            right: 0;
+            bottom: 0;
+        }
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-left: auto;
+        width: 100%;
+        max-width: 545px;
+
+        &:hover {
+            .white {
+                transform: translateX(70px);
+            }
+        }
+
+        & svg {
+            height: auto;
+        }
+
+        & .white {
+            @include transitionEaseOutQuint(all);
+        }
+    }
+}

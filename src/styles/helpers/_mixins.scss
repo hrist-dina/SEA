@@ -113,3 +113,12 @@
 @mixin transitionEaseOutQuint($properties, $duration: .6s, $delay:0s) {
     @include transitionSomeProps($properties, $duration, cubic-bezier(0.23, 1, 0.32, 1), $delay);
 }
+
+@mixin margin-left-centered {
+    @include from(1300px) {
+        margin-left: #{calc((100% - 1280px) / 2 )};
+        padding: 0 20px 0 0;
+    }
+
+    @include col-padding;
+}
