@@ -1,0 +1,64 @@
+.form {
+
+    &__body {
+        @include md-block {
+            margin-bottom: 48px;
+        }
+        margin-bottom: 40px;
+    }
+
+    &__row {
+        @include md-block {
+            display: flex;
+            margin: 0 -20px 32px;
+        }
+        margin-bottom: 32px;
+    }
+
+    &__hulf {
+        @include md-block {
+            width: #{calc(50% - 20px)};
+            margin: 0 20px;
+        }
+        width: 100%;
+        margin-bottom: 32px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__full {
+        @include md-block {
+            margin: 0 20px;
+        }
+        width: 100%;
+    }
+
+    &__footer {
+        @include md-block {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__policy {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 22px;
+        color: #64697a;
+    }
+
+
+    &-title {
+        @include lg-block {
+            font-size: 48px;
+            line-height: 56px;
+        }
+        font-family: $title-font;
+        font-weight: $bold;
+
+        color: #233d63;
+        font-size: 30px;
+        line-height: 36px;
+    }
+}

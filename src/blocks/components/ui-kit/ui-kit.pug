@@ -32,6 +32,14 @@ mixin field(name, placeholder, hintText = null, modifLabel=null)
                 +hint(hintText)
         input.field__input.js-field-input(name=name type=type)&attributes(attributes)
 
+mixin field-area(name, placeholder, hintText = null, modifLabel=null)
+    label.field.js-field(class=modifLabel)
+        span.field__placeholder
+            span.field__placeholder-text=placeholder
+            if hintText
+                +hint(hintText)
+        textarea.field__input.js-field-input(name=name type=type)&attributes(attributes)
+
 mixin button-show-more
     +button-transparent('Показать еще')(class='button--show-more')
 

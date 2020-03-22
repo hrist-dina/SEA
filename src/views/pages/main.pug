@@ -5,6 +5,7 @@ include ../../blocks/components/services/services
 include ../../blocks/components/card/card
 include ../../blocks/components/services-all/services-all
 include ../../blocks/components/features/features
+include ../../blocks/components/consultation/consultation
 
 block variables
 	- const title = "Главная";
@@ -17,5 +18,6 @@ block content
 		+features-section
 		+p-card-slider('Публикации')
 		+card-slider('Карточки')
+		+consultation-section
 
 

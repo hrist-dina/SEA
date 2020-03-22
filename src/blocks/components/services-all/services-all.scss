@@ -2,6 +2,12 @@
     background-color: #f7f7f7;
     position: relative;
 
+    &:hover {
+        .white {
+            transform: translateX(70px);
+        }
+    }
+
     &__inner {
         @include lg-block {
             padding: 70px 80px;
@@ -24,14 +30,14 @@
                 display: block;
             }
         }
-        & br {
-            display: none;
-        }
         font-family: $title-font;
         font-size: 25px;
         line-height: 36px;
         color: #233d63;
         margin-bottom: 32px;
+        & br {
+            display: none;
+        }
     }
 
     &__decor {
@@ -47,12 +53,6 @@
         margin-left: auto;
         width: 100%;
         max-width: 545px;
-
-        &:hover {
-            .white {
-                transform: translateX(70px);
-            }
-        }
 
         & svg {
             height: auto;

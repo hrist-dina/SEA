@@ -2,8 +2,10 @@ $button-search-width: 106px;
 
 .button {
     @include outline-none();
+    @include transitionEaseOutQuint(all);
     box-sizing: border-box;
     display: flex;
+    justify-content: center;
     border: none;
     padding: 12px 32px;
     background: $button-color;
@@ -14,6 +16,7 @@ $button-search-width: 106px;
     text-transform: uppercase;
     color: $button-color-text;
     text-decoration: none;
+    cursor: pointer;
 
     &:disabled {
         opacity: .3;
@@ -45,6 +48,7 @@ $button-search-width: 106px;
 
         &:hover {
             color: #fff;
+            background: $button-color;
         }
     }
 
@@ -68,6 +72,7 @@ $button-search-width: 106px;
 
     &--subscribe {
         width: 142px;
+        padding: 12px 18px;
         background: #007b75;
         font-size: 14px;
         line-height: 24px;
@@ -75,7 +80,6 @@ $button-search-width: 106px;
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: #fff;
-        padding: 12px 18px;
     }
 
     &--square {
@@ -119,15 +123,15 @@ $button-search-width: 106px;
 
 
 .field-select, .field {
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: flex;
     align-items: flex-end;
     position: relative;
     width: 100%;
-    height: 54px;
-    background: #fff;
+    min-height: 40px;
+    background: transparent;
     border-bottom: 1px solid #cccccc;
-    padding-bottom: 8px;
+    padding-bottom: 2px;
 
     &__placeholder {
         @include transitionEaseOutQuint((top, font-size));
@@ -136,12 +140,14 @@ $button-search-width: 106px;
         align-items: center;
         position: absolute;
         z-index: 1;
-        top: 18px;
+        top: 6px;
         left: 0;
         width: 100%;
-        font-size: 18px;
-        line-height: 27px;
-        color: #a7afb4;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: rgba(35, 61, 99, 0.7);
         cursor: pointer;
 
         &-text {
@@ -158,21 +164,31 @@ $button-search-width: 106px;
     &__input {
         @include outline-none;
         width: 100%;
-        height: 27px;
         border: none;
         background: transparent;
-        font-size: 18px;
-        line-height: 27px;
-        color: #242322;
+        font-size: 14px;
+        line-height: 24px;
+        color: $base-color;
 
         &[type=number]:not(:focus)::-webkit-inner-spin-button, &[type=number]:not(:focus)::-webkit-outer-spin-button {
             margin: 0;
             -webkit-appearance: none;
         }
     }
+    & textarea {
+        min-height: 80px;
+        margin: 10px 0 0;
+        border: none;
+        padding: 0;
+        resize: none;
+        font-size: 14px;
+        line-height: 24px;
+        color: $base-color;
+        background: transparent;
+    }
 
     &.active &__placeholder {
-        top: 0;
+        top: -6px;
         font-weight: 300;
         font-size: 13px;
         line-height: 18px;

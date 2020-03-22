@@ -1,0 +1,61 @@
+
+.section {
+
+    &__head {
+        @include sm-block {
+            margin-bottom: 64px;
+        }
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    &__head &__title, &__head &__nav {
+        width: 50%;
+        margin-bottom: 0;
+    }
+    &__nav {
+        @include sm-block {
+            display: flex;
+        }
+        display: none;
+        justify-content: flex-end;
+        & .icon {
+            &:first-child {
+                margin-right: 36px;
+            }
+        }
+    }
+
+    &__breadcrumbs {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    &__title {
+        @include sm-block {
+            margin-bottom: 64px;
+        }
+        margin-bottom: 40px;
+
+        & .h1 {
+            text-align: center;
+        }
+    }
+
+    &__buttons {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    &--inner-page {
+        padding: 32px 0 96px;
+    }
+
+    & ~ & {
+        @include sm-block {
+            margin-top: 100px;
+        }
+        margin-top: 60px;
+    }
+}
