@@ -1,6 +1,6 @@
 import $ from "jquery";
 import ComponentBase from "%classes%/ComponentBase";
-//import Select from "%components%/select/select";
+import Select from "%components%/select/select";
 
 class UiKit extends ComponentBase {
     constructor() {
@@ -8,7 +8,7 @@ class UiKit extends ComponentBase {
     }
     init() {
         new Field();
-        //new Select();
+        new Select();
     }
 }
 

@@ -1,0 +1,56 @@
+include ../ui-kit/ui-kit
+include ../select/select
+
+mixin online-services(title = 'Заявка на проведение экспертизы')
+    .online-services
+        .__inner
+            .__title.form-title=title
+            form.form.__form
+                .__body
+                    .__row
+                        .__hulf
+                            +field('fio', 'ФИО')
+                        .__hulf
+                            +field('city', 'Город')
+                    .__row
+                        .__hulf
+                            +field('phone', 'Телефон')
+                        .__hulf
+                            +field('email', 'Email')
+                    .__row
+                        .__hulf
+                            +select([
+                                {
+                                    value: '1',
+                                    text: 'test'
+                                },
+                                {
+                                    value: '2',
+                                    text: 'test test'
+                                },
+                                {
+                                    value: '3',
+                                    text: 'test test test'
+                                }
+                            ],'who', 'Вы выступаете как')
+                        .__hulf
+                            +select([
+                                {
+                                    value: '1',
+                                    text: 'test'
+                                },
+                                {
+                                    value: '2',
+                                    text: 'test test'
+                                },
+                                {
+                                    value: '3',
+                                    text: 'test test test'
+                                }
+                            ],'type', 'Вид экспертизы')
+                    .__row
+                        .__full
+                            +field-area('meterials', 'Перечень материалов и объектов, которые будут представлены на исследование')
+                            +field-file('files', 'Прикрепить файл')
+
+

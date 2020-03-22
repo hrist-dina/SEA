@@ -1,0 +1,23 @@
+mixin select(options, nameSelect, placeholder, hintText = null, jsSelector = "js-select", data = false)
+    -
+        var dataAttr = {};
+        if (data) {
+            for (var item in data) {
+                dataAttr[`data-${item}`]=data[item];
+            }
+
+        }
+
+    label.field-select.js-field
+        span.field-select__placeholder
+            span.field-select___placeholder-text=placeholder
+            if hintText
+                +hint(hintText)
+        select(name=nameSelect class=['select','js-field-input', jsSelector])&attributes(dataAttr, attributes)
+            for option, key in options
+                if key === 0
+                    - var attributesOpt = {'disabled': true, 'selected': true, 'hidden': true};
+                    option(value='')&attributes(attributesOpt)
+                    option(value=option.value)=option.text
+                else
+                    option(value=option.value)=option.text

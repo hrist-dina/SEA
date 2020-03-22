@@ -1,0 +1,26 @@
+.online-services {
+    @include lg-block {
+        margin: 0;
+    }
+    background: #f7f7f7;
+    margin: 0 -15px;
+
+    &__inner {
+        @include lg-block {
+            padding: 64px 110px 100px;
+        }
+        padding: 48px 15px 56px;
+    }
+
+    &__title {
+        @include lg-block {
+            margin-bottom: 48px;
+        }
+        margin-bottom: 40px;
+    }
+
+    &__form {
+        width: 100%;
+        max-width: 722px;
+    }
+}

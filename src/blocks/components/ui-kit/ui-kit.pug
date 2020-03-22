@@ -40,6 +40,10 @@ mixin field-area(name, placeholder, hintText = null, modifLabel=null)
                 +hint(hintText)
         textarea.field__input.js-field-input(name=name type=type)&attributes(attributes)
 
+mixin field-file(name, placeholder)
+    label.field-file
+        input.field-file__input(name=name type='file')&attributes(attributes)
+
 mixin button-show-more
     +button-transparent('Показать еще')(class='button--show-more')
 

@@ -1,4 +1,7 @@
 .consultation {
+    @include lg-block {
+        margin: 0;
+    }
     background: #f7f7f7;
     margin: 0 -15px;
 

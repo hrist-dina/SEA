@@ -114,3 +114,16 @@
     @include wh(20px,29px);
     @include icon-bgc(icon-arrow-down());
 }
+
+.icon-clip {
+    @include wh(16px);
+    @include icon-bgc(icon-clip());
+}
+
+.icon-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 6px 0 6px;
+    border-color: #007b75 transparent transparent transparent;
+}

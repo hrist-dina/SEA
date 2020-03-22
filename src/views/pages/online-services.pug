@@ -1,0 +1,12 @@
+extends ../layouts/default
+include ../../blocks/components/online-services/online-services
+
+block variables
+	- const title = "Онлайн-сервисы";
+	- h1 = title
+	include ../data/inner
+
+block content
+	+online-services
+
+
