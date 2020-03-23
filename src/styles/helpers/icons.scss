@@ -127,3 +127,19 @@
     border-width: 7px 6px 0 6px;
     border-color: #007b75 transparent transparent transparent;
 }
+
+.icon-pdf {
+    @include wh(48px);
+    @include icon-bgc(icon-pdf());
+    @include md-block {
+        @include wh(64px);
+        background-size: 32px;
+    }
+    background-size: 24px;
+    background-color: #007b75;
+}
+
+.icon-arrow-triangle-left {
+    @include wh(6px, 10px);
+    @include icon-bgc(icon-arrow-triangle());
+}

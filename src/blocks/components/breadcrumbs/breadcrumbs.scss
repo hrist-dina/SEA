@@ -1,12 +1,30 @@
 .breadcrumbs {
+    @include md-block {
+        text-align: center;
+    }
+
+    @include to($break_md) {
+        &__item {
+            display: none;
+
+            &:nth-last-child(2) {
+                display: inline-flex;
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+
     list-style-type: none;
+    text-align: left;
 
     &__link {
         text-decoration: none;
     }
 
     &__item, &__item &__link {
-        @include sm-block {
+        @include md-block {
             font-size: 13px;
             line-height: 18px;
         }
@@ -19,11 +37,34 @@
     }
 
     &__item:not(:last-child):after {
-        @include sm-block {
+        @include md-block {
             padding: 0 10px;
         }
         content: "/";
         display: inline-block;
         padding: 0 8px;
+    }
+
+
+    &__item:nth-last-child(2) &__link {
+        @include md-block {
+            padding-left: 0;
+            &:before {
+                content: none;
+            }
+        }
+        display: inline-flex;
+        padding-left: 20px;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: auto;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            @extend .icon-arrow-triangle-left;
+        }
     }
 }

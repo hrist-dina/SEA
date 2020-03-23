@@ -49,11 +49,14 @@
     }
 
     &--inner-page {
-        padding: 32px 0 96px;
+        @include md-block {
+            padding: 32px 0 96px;
+        }
+        padding: 16px 0 40px;
     }
 
     & ~ & {
-        @include sm-block {
+        @include md-block {
             margin-top: 100px;
         }
         margin-top: 60px;

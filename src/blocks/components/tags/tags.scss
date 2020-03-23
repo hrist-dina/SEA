@@ -25,4 +25,16 @@
         background: #e9eeee;
         border-radius: 2px;
     }
+
+    &-wrap {
+        display: flex;
+    }
+
+    &-title {
+        font-weight: $bold;
+        font-size: 14px;
+        line-height: 22px;
+        color: #393e46;
+        margin-right: 16px;
+    }
 }

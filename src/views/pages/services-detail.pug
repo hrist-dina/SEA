@@ -1,0 +1,30 @@
+extends ../layouts/default
+include ../../blocks/components/services-detail/services-detail
+include ../../blocks/components/consultation/consultation
+include ../../blocks/components/p-card/p-card
+include ../../blocks/components/card/card
+
+
+block variables
+	- const title = "Лингвистическая экспертиза";
+	- h1 = title
+	-
+		breadcrumbsMiddle = [
+			{
+				name: 'Услуги',
+				link: '#'
+			}
+		];
+	include ../data/inner
+
+
+block content
+	+services-detail
+	+consultation-section
+	+p-card-slider('Публикации по теме')
+	+card-slider('Карточки')
+
+
+
+
+

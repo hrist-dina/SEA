@@ -1,0 +1,38 @@
+.services-detail {
+    @include md-block {
+        margin-bottom: 100px;
+    }
+    margin-bottom: 72px;
+
+    &__img {
+        @include md-block {
+            height: 546px;
+            margin-bottom: 64px;
+        }
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 156px;
+        margin-bottom: 40px;
+    }
+
+    &__meta, &__text {
+        width: 100%;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    &__files {
+        @include md-block {
+            margin-top: 80px;
+        }
+        margin-top: 45px;
+    }
+
+    &__tags {
+        @include md-block {
+            margin-top: 64px;
+        }
+        margin-top: 48px;
+    }
+}
