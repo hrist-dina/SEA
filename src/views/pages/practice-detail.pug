@@ -1,0 +1,30 @@
+extends ../layouts/default
+include ../../blocks/components/consultation/consultation
+include ../../blocks/components/p-card/p-card
+include ../../blocks/components/services/services
+include ../../blocks/components/card/card
+
+
+block variables
+	- const title = "Прокурорская проверка бутика мирового бренда";
+	- h1 = title
+	-
+		breadcrumbsMiddle = [
+			{
+				name: 'Практика',
+				link: '#'
+			}
+		];
+	include ../data/inner
+
+
+block content
+	+consultation-section
+	+services-section('Наши услуги', false)
+	+p-card-slider('Публикации по теме')
+	+card-slider('Карточки')
+
+
+
+
+
