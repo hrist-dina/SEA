@@ -51,6 +51,37 @@ mixin online-services(title = 'Заявка на проведение экспе
                     .__row
                         .__full
                             +field-area('meterials', 'Перечень материалов и объектов, которые будут представлены на исследование')
-                            +field-file('files', 'Прикрепить файл')
+                            .__file
+                                +field-file('files', 'Прикрепить файл')
+                    .__row
+                        .__full
+                            +field-area('questions', 'Вопросы, которые будут поставлены на экспертизу')
 
+                .__body
+                    .form-subtitle Данные для подготовки договора
+                    .form__block
+                        .form__block-title Для физических лиц
+                        .form__row
+                            .form__hulf
+                                +field('fio_physic', 'ФИО')
+                            .form__hulf
+                                +field('city_physic', 'Город')
+                        .form__row
+                            .form__hulf
+                                +field('passport_number_physic', 'Телефон')
+                            .form__hulf
+                                +field('passport_series_physic', 'Email')
+                        .form__row
+                            .form__full
+                                +field-area('passport_who_physic', 'Кем и когда выдан паспорт')
+                    .form__block
+                        .form__block-title Для юридических лиц
+                        .form__row
+                            .form__full
+                                .form__file
+                                    +field-file('card_org', 'Прикрепить карточку организации')
+                .__footer
+                    .__button
+                        +button('Отправить', false, 'submit')(class='consultation__button')
+                    .__policy.consultation__policy Нажимая на кнопку «Отправить», вы подтверждаете свое согласие на обработку персональных данных
 

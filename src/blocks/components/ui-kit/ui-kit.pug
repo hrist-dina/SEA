@@ -42,6 +42,7 @@ mixin field-area(name, placeholder, hintText = null, modifLabel=null)
 
 mixin field-file(name, placeholder)
     label.field-file
+        span.field-file__placeholder=placeholder
         input.field-file__input(name=name type='file')&attributes(attributes)
 
 mixin button-show-more
