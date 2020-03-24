@@ -96,6 +96,11 @@
     @include icon-bgc(icon-cards());
 }
 
+.icon-cards-green {
+    @include wh(24px);
+    @include icon-bgc(icon-cards("007B75"));
+}
+
 .icon-fb {
     @include wh(48px);
     @include icon-bgc(icon-fb());

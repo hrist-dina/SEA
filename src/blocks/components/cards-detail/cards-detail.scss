@@ -1,0 +1,131 @@
+.card-sidebar {
+    border-left: 6px solid #007b75;
+    background: #f7f7f7;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    &__count {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 19px 20px 18px 33px;
+        font-size: 16px;
+        line-height: 22px;
+        color: #90a4af;
+        &:before {
+            content: "";
+            position: relative;
+            margin-right: 8px;
+            @extend .icon-cards-green;
+        }
+    }
+
+    &__list {
+
+    }
+
+    &__item {
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-decoration: none;
+        padding: 12px 20px 12px 32px;
+        border-top: 1px solid #fff;
+    }
+
+
+    &__number {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 32px;
+        color: #64697a;
+        margin-right: 16px;
+    }
+
+    &__text {
+        font-style: italic;
+        font-size: 18px;
+        line-height: 32px;
+        color: #233d63;
+    }
+}
+
+.card-content {
+    box-sizing: border-box;
+    padding: 32px 32px 64px 40px;
+    background: #f7f7f7;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &__number {
+        font-weight: $bold;
+        font-size: 30px;
+        line-height: 27px;
+        text-align: center;
+        color: #007b75;
+        margin-bottom: 16px;
+
+        & span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 0 16px;
+            &:before, &:after {
+                @include wh(6px);
+                content: "";
+                position: absolute;
+                background: #007b75;
+            }
+            &:before {
+                left: 0;
+            }
+
+            &:after {
+                right: 0;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        font-family: $title-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        color: #393e46;
+
+        & p {
+            margin-top: 0;
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        ul, ol {
+            padding-left: 30px;
+
+
+            & li {
+                padding-left: 8px;
+                margin-bottom: 30px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

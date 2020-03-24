@@ -1,0 +1,28 @@
+extends ../layouts/default
+include ../../blocks/components/cards-detail/cards-detail
+include ../../blocks/components/consultation/consultation
+include ../../blocks/components/services/services
+
+
+block variables
+	- const title = "Кто виноват и что с этим можно сделать? Разбираемся";
+	- h1 = title
+	-
+		breadcrumbsMiddle = [
+			{
+				name: 'Карточки',
+				link: '#'
+			}
+		];
+	include ../data/inner
+
+
+block content
+	+cards-detail
+	+services-section('Наши услуги', false)
+	+consultation-section
+
+
+
+
+

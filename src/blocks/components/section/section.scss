@@ -14,6 +14,7 @@
         width: 50%;
         margin-bottom: 0;
     }
+
     &__nav {
         @include sm-block {
             display: flex;
@@ -53,6 +54,13 @@
             padding: 32px 0 96px;
         }
         padding: 16px 0 40px;
+    }
+
+    &--bordered {
+        position: relative;
+        border-bottom: 1px solid #f0f0f0;
+        padding-bottom: 64px;
+        margin-bottom: 64px;
     }
 
     & ~ & {

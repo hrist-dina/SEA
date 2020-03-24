@@ -2,6 +2,7 @@ h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
 }
+
 html,
 body {
     height: 100%;
@@ -22,6 +23,7 @@ body {
     flex-direction: column;
     min-height: 100%;
 }
+
 .footer {
     flex: 0 0 auto;
 }
@@ -149,6 +151,24 @@ h3, .h3 {
                     top: 14px;
                 }
             }
+        }
+    }
+}
+
+.with-sidebar {
+    @include row-flex;
+
+    & .sidebar {
+        @include col;
+        @include size(4);
+    }
+
+    & .content {
+        @include col;
+        @include size(8);
+
+        &__tags {
+            margin-top: 48px;
         }
     }
 }
