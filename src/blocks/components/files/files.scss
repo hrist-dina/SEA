@@ -1,0 +1,55 @@
+.files {
+    @include sm-block {
+        padding: 24px 40px 36px;
+    }
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f7f7f7;
+    padding: 24px;
+
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        line-height: 0;
+    }
+
+    &__icon {
+
+        @include to($break_sm) {
+            .icon {
+                @include wh(24px);
+            }
+        }
+        margin-right: 16px;
+    }
+
+    &__ext, &__name {
+        @include sm-block {
+            font-size: 18px;
+            line-height: 32px;
+        }
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &__name {
+        text-decoration-line: underline;
+        color: #64697a;
+    }
+
+    &__ext {
+        margin-left: 4px;
+        color: #a0a0a0;
+    }
+
+    & &__item {
+        @include sm-block {
+            margin-bottom: 24px;
+        }
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+include ../icon/icon
+
+
+mixin files
+    .files
+        - let i = 0
+        while i < 3
+            +files-item
+            - i++
+
+mixin files-item
+    a(href='#').files__item
+        span.files__icon
+            +icon('file')
+        span.files__name Название файла
+        span.files__ext .doc
+

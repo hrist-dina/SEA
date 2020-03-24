@@ -1,0 +1,38 @@
+.practice-detail {
+
+    &__content {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    &__meta {
+
+        @include sm-block {
+            padding: 48px 15px;
+        }
+        margin: -15px;
+        padding: 32px 15px;
+        background: #f7f7f7;
+    }
+    
+    &__options {
+        @include sm-block {
+            padding-bottom: 32px;
+        }
+        padding-bottom: 24px;
+        border-bottom: 1px solid #d4d4d4;
+    }
+
+    &__link {
+        @include sm-block {
+            margin-top: 28px;
+            text-align: left;
+        }
+        margin-top: 24px;
+        text-align: center;
+    }
+
+    &__block {
+        margin-bottom: 48px;
+    }
+}

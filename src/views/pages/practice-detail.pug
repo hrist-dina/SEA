@@ -1,4 +1,5 @@
 extends ../layouts/default
+include ../../blocks/components/practice-detail/practice-detail
 include ../../blocks/components/consultation/consultation
 include ../../blocks/components/p-card/p-card
 include ../../blocks/components/services/services
@@ -19,6 +20,7 @@ block variables
 
 
 block content
+	+practice-detail
 	+consultation-section
 	+services-section('Наши услуги', false)
 	+p-card-slider('Публикации по теме')

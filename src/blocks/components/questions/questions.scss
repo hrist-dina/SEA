@@ -1,0 +1,26 @@
+.questions {
+
+    &__item {
+        @include sm-block {
+            font-size: 20px;
+            line-height: 32px;
+            padding: 24px;
+        }
+        box-sizing: border-box;
+        display: flex;
+        border: 1px solid #dfeae9;
+        padding: 16px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: #233d63;
+
+        &:not(:last-child) {
+            border-bottom: 0;
+        }
+    }
+
+    &__number {
+        margin-right: 8px;
+    }
+}

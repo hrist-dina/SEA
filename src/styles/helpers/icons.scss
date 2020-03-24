@@ -143,3 +143,18 @@
     @include wh(6px, 10px);
     @include icon-bgc(icon-arrow-triangle());
 }
+
+.icon-link {
+    @include wh(16px);
+    @include icon-bgc(icon-link());
+}
+
+.icon-quotes {
+    @include wh(36px);
+    @include icon-bgc(icon-quotes());
+}
+
+.icon-file {
+    @include wh(32px);
+    @include icon-bgc(icon-file());
+}

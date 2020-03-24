@@ -1,0 +1,40 @@
+.options {
+
+    &__item {
+        display: flex;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__key {
+        @include sm-block {
+            max-width: 190px;
+            margin-bottom: 0;
+            font-size: 18px;
+            line-height: 27px;
+        }
+        margin-right: 10px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 95px;
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 25px;
+        color: #64697a;
+    }
+
+    &__value {
+        @include sm-block {
+            width: #{calc(100% - 190px)};
+            font-size: 18px;
+            line-height: 27px;
+        }
+        width: #{calc(100% - 95px)};
+        font-size: 16px;
+        line-height: 25px;
+        color: #393e46;
+    }
+}

@@ -1,0 +1,10 @@
+
+mixin options(options)
+    .options
+        for item in options
+            +options-item(item)
+
+mixin options-item(data)
+    .options__item
+        .options__key=data.key
+        .options__value=data.value

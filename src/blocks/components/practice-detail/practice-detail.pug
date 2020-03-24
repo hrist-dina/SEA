@@ -1,8 +1,64 @@
+include ../section/section
+include ../options/options
+include ../ui-kit/ui-kit
+include ../questions/questions
+include ../comment/comment
+include ../files/files
 
 //- Блок детальной страницы "Практика"
 mixin practice-detail
-    .practice-detail
-        .__meta
+    +section
+        .practice-detail
+            .__meta.practice-detail__block
+                .__content
+                    .__options
+                        +options([
+                            {
+                                key: 'Номер дела:',
+                                value: '4815162342'
+                            },
+                            {
+                                key: 'Вид экспертизы:',
+                                value: 'Название'
+                            },
+                            {
+                                key: 'Суд:',
+                                value: 'Московский городской суд'
+                            },
+                            {
+                                key: 'Истец:',
+                                value: 'Территориальный отдел Управления Роспотребнадзора по городу Москве в ВАО г. Москвы'
+                            },
+                            {
+                                key: 'Ответчик:',
+                                value: 'Ип Борисова И.Я., Ип Черемных Е.В.'
+                            }
+                        ])
+                    .__link
+                        +link-icon('Ссылка на решение', 'link')
 
-        .__block
+
+            .__block
+                .__content
+                    h3.h3.__title Вопросы на экспертизу
+                    +questions
+
+            .__block
+                .__content
+                    h3.h3.__title Комментарии эксперта
+                    +comment
+            .__block
+                .__content
+                    h3.h3.__title Файлы
+                    +files
+
+
+
+
+
+
+
+
+
+
 
