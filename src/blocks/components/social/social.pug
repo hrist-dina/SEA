@@ -1,10 +1,16 @@
 include ../icon/icon
 
 //- Блок с социальными сетями
-mixin social
+mixin social(list = ['fb', 'telegram'])
     .social
         .__list
-            a(href='#').__item
-                +icon('fb')
-            a(href='#').__item
-                +icon('telegram')
+            for icon in list
+                a(href='#').__item
+                    +icon(icon)
+
+
+mixin social-share
+    .social-share
+        .__title Поделиться:
+        .__box
+            +social(['vk', 'fb', 'telegram'])

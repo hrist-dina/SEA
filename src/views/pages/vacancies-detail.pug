@@ -1,0 +1,23 @@
+extends ../layouts/default
+include ../../blocks/components/vacancy-detail/vacancy-detail
+
+block variables
+	- const title = "Оценщик в штат";
+	- h1 = title
+	-
+		breadcrumbsMiddle = [
+			{
+				name: 'Вакансии',
+				link: '#'
+			}
+		];
+	include ../data/inner
+
+
+block content
+	+vacancy-detail
+
+
+
+
+

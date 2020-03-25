@@ -2,7 +2,9 @@
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
+        margin-bottom: -16px;
     }
 
     &__item {
@@ -10,8 +12,25 @@
         text-decoration: none;
         margin-right: 16px;
         display: inline-block;
+        margin-bottom: 16px;
         &:last-child {
             margin-right: 0;
+        }
+    }
+
+    &-share {
+        display: flex;
+        align-items: center;
+        &__title {
+            @include sm-block {
+                font-size: 18px;
+                line-height: 44px;
+                margin-right: 26px;
+            }
+            font-size: 16px;
+            line-height: 32px;
+            color: #64697a;
+            margin-right: 20px;
         }
     }
 }

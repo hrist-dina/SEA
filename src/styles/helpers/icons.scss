@@ -115,6 +115,13 @@
     background-size: 24px;
 }
 
+.icon-vk {
+    @include wh(48px);
+    @include icon-bgc(icon-vk());
+    background-color: #597da3;
+    background-size: 24px;
+}
+
 .icon-arrow-down {
     @include wh(20px,29px);
     @include icon-bgc(icon-arrow-down());
