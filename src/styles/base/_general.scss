@@ -153,6 +153,11 @@ h3, .h3 {
             }
         }
     }
+
+    & a {
+        text-decoration: none;
+        color: #64697A;
+    }
 }
 
 .with-sidebar {

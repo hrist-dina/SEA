@@ -1,0 +1,11 @@
+extends ../layouts/default
+include ../../blocks/components/vacancy/vacancy
+
+block variables
+	- const title = "Вакансии";
+	- h1 = title
+	include ../data/inner
+
+block content
+	+vacancy-section
+
