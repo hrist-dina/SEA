@@ -49,7 +49,7 @@ h1, .h1 {
     color: #233D63;
     font-size: 36px;
     line-height: 48px;
-    @include sm-block {
+    @include md-block {
         font-size: 64px;
         line-height: 80px;
     }
@@ -61,7 +61,7 @@ h2, .h2 {
     color: #233D63;
     font-size: 32px;
     line-height: 40px;
-    @include sm-block {
+    @include md-block {
         font-size: 48px;
         line-height: 56px;
     }
@@ -75,7 +75,7 @@ h3, .h3 {
     line-height: 36px;
     color: #233D63;
     margin-bottom: 16px;
-    @include sm-block {
+    @include md-block {
         font-size: 35px;
         line-height: 48px;
         margin-bottom: 24px;
@@ -157,15 +157,23 @@ h3, .h3 {
 
 .with-sidebar {
     @include row-flex;
+    position: relative;
 
     & .sidebar {
         @include col;
-        @include size(4);
+        @include size-md(4);
+        @include size(12);
+        @include md-block {
+            margin-bottom: 0;
+        }
+
+        margin-bottom: 24px;
     }
 
     & .content {
         @include col;
-        @include size(8);
+        @include size-md(8);
+        @include size(12);
 
         &__tags {
             margin-top: 48px;

@@ -5,22 +5,21 @@ mixin cards-detail
     +section(false, 'section--bordered')
         .with-sidebar
             .sidebar
-                .card-sidebar
+                .card-sidebar.card-sidebar--sticky
                     .__count 4 карточки
                     .__list
-                        a(href='#card-content-1').__item
+                        a(href='#card-content-1').__item.js-scrollto
                             span.__number 1.
                             span.__text Кто виноват и как вообще быть?
-                        a(href='#card-content-2').__item
+                        a(href='#card-content-2').__item.js-scrollto
                             span.__number 2.
-                            span.__text Что делать?
-                        a(href='#card-content-3').__item
+                            span.__text Что делать?s
+                        a(href='#card-content-3').__item.js-scrollto
                             span.__number 3.
                             span.__text Что? Да!
-                        a(href='#card-content-4').__item
+                        a(href='#card-content-4').__item.js-scrollto
                             span.__number 4.
                             span.__text Итоги
-
             .content
                 .__box
                     +card-content({
