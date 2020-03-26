@@ -1,0 +1,46 @@
+include ../section/section
+include ../map/map
+include ../icon/icon
+include ../social/social
+
+
+//- Блок с картой на странице "Контакты"
+mixin contacts
+    .contacts
+        .__inner
+            .__data.js-map-data(
+                data-map-id='map-contacts'
+                data-center-x='55.76255556896434'
+                data-center-y='37.62717s549999999'
+                data-zoom='16'
+            )
+                .__address.js-map-data-item(
+                    data-location-x='55.76255556896434'
+                    data-location-y='37.62717549999999'
+                    data-hint='Москва, Кузнецкий Мост 21/5, офис 5057 А'
+                )
+                    +icon('address')
+                    span Москва, Кузнецкий Мост 21/5, офис 5057 А
+                .__metro
+                    .__metro-item
+                        +icon('metro-purple')
+                        span Кузнецкий мост
+                    .__metro-item
+                        +icon('metro-red')
+                        span Лубянка
+                .__phones
+                    +phones-block
+                .__email
+                    a(href='mailto:info@sudagent.ru') info@sudagent.ru
+                .__social
+                    +social
+            .__map
+                +map('contacts')
+
+
+
+
+
+mixin contants-section
+    +section
+        +contacts

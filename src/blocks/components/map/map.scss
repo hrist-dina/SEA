@@ -1,0 +1,88 @@
+.map {
+
+    @include md-block {
+        min-height: 354px;
+    }
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 320px;
+
+    &__inner {
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        background: #c4c4c4;
+    }
+
+    &-zoom {
+        @include lg-block {
+            width: 42px;
+            height: 100px;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 32px;
+        height: 80px;
+
+        & .plus, & .minus {
+            @include transitionEaseOutQuint(background);
+
+            @include lg-block {
+                width: 42px;
+                height: 42px;
+            }
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 3px 10px 15px rgba(0, 0, 0, 0.25);
+
+            &:hover {
+                box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.25);
+                background: #fff;
+            }
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 10px;
+                height: 2px;
+                margin: auto;
+                background: #000;
+            }
+        }
+
+        & .plus {
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 2px;
+                height: 10px;
+                margin: auto;
+                background: #000;
+            }
+        }
+    }
+}
+
+//[class*="ymaps-2"][class*="-ground-pane"] {
+//  -webkit-filter: grayscale(100%) url("../img/map/filter-mask.svg#colorChange");
+//  filter: grayscale(100%) url("../img/map/filter-mask.svg#colorChange");
+//}

@@ -1,0 +1,17 @@
+extends ../layouts/default
+include ../../blocks/components/contacts/contacts
+
+block variables
+	- const title = "Контакты";
+	- h1 = title
+	include ../data/inner
+
+
+block content
+	+contacts
+
+
+
+
+
+
