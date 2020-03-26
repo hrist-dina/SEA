@@ -10,7 +10,7 @@ mixin select(options, nameSelect, placeholder, hintText = null, jsSelector = "js
 
     label.field-select.js-field
         span.field-select__placeholder
-            span.field-select___placeholder-text=placeholder
+            span.field-select__placeholder-text=placeholder
             if hintText
                 +hint(hintText)
         select(name=nameSelect class=['select','js-field-input', jsSelector])&attributes(dataAttr, attributes)

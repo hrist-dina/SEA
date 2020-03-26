@@ -5,35 +5,37 @@ mixin consultation(title = 'Получить консультацию')
     .consultation
         .__inner
             .__title.form-title=title
-            .__box
-                form(type='post').form.__form
-                    .__body
-                        .__row
-                            .__hulf
-                                +field('name','Ваше имя')
-                            .__hulf
-                                +field('phone','Номер телефона')
-                        .__row
-                            .__full
-                                +field-area('comment', 'Комментарий (необязательно)')
-                    .__footer
-                        .__button
-                            +button('Отправить', false, 'submit')(class='consultation__button')
-                        .__policy.consultation__policy Нажимая на кнопку «Отправить», вы подтверждаете свое согласие на обработку персональных данных
+            +consultation-box
+
+mixin consultation-box
+    .consultation__box
+        form(type='post').form.consultation__form
+            .__body
+                .__row
+                    .__hulf
+                        +field('name','Ваше имя')
+                    .__hulf
+                        +field('phone','Номер телефона')
+                .__row
+                    .__full
+                        +field-area('comment', 'Комментарий (необязательно)')
+            .__footer
+                .__button
+                    +button('Отправить', false, 'submit')(class='consultation__button')
+                .__policy.consultation__policy Нажимая на кнопку «Отправить», вы подтверждаете свое согласие на обработку персональных данных
 
 
-                .__info
-                    ul.__info-list
-                        li.__info-item
-                            span.__info-number 1
-                            span.__info-text Оставьте заявку на сайте
-                        li.__info-item
-                            span.__info-number 2
-                            span.__info-text Мы перезвоним вам в течение 15 минут
-                        li.__info-item
-                            span.__info-number 3
-                            span.__info-text Консультация – бесплатно
-
+        .consultation__info
+            ul.consultation__info-list
+                li.consultation__info-item
+                    span.consultation__info-number 1
+                    span.consultation__info-text Оставьте заявку на сайте
+                li.consultation__info-item
+                    span.consultation__info-number 2
+                    span.consultation__info-text Мы перезвоним вам в течение 15 минут
+                liconsultation.__info-item
+                    span.consultation__info-number 3
+                    span.consultation__info-text Консультация – бесплатно
 mixin consultation-section
     +section
         +consultation

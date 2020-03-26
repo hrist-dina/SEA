@@ -9,7 +9,6 @@ export default class Mask {
 
     init() {
         new Mask(".js-mask-phone").phone();
-        new Mask(".js-mask-area").area();
         new Mask(".js-mask-date").date();
     }
 
@@ -17,18 +16,6 @@ export default class Mask {
         new Inputmask({
             mask: "+7 999 999-99-99",
             showMaskOnHover: false,
-        }).mask(this.elem);
-    }
-
-    area() {
-        new Inputmask({
-            alias: "numeric",
-            allowMinus: false,
-            rightAlign: false,
-            showMaskOnHover: false,
-            digits: 2,
-            decimal: ".",
-            max: 99999.99,
         }).mask(this.elem);
     }
 

@@ -134,7 +134,7 @@ export default class Map {
             });
 
             // Добавляем метки с городами
-            this.items.forEach((item) => {
+            this.items.forEach(item => {
                 collection.add(
                     this.createPlaceMark(
                         [item.locationX, item.locationY],

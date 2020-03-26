@@ -1,0 +1,8 @@
+include ../ui-kit/ui-kit
+include ../consultation/consultation
+
+mixin online-service-call
+    .online-service(data-tab-content='call')
+        .__inner
+            .__title.form-title Заявка на обратный звонок
+            +consultation-box

@@ -193,3 +193,28 @@
 .icon-metro-red {
     @include icon-metro("EF1E25");
 }
+
+.icon-expertise {
+    @include wh(64px);
+    @include icon-bgc(icon-expertise());
+}
+
+.icon-letter {
+    @include wh(64px);
+    @include icon-bgc(icon-letter());
+}
+
+.icon-review {
+    @include wh(64px);
+    @include icon-bgc(icon-review());
+}
+
+.icon-call {
+    @include wh(64px);
+    @include icon-bgc(icon-call());
+}
+
+.icon-calendar {
+    @include wh(24px);
+    @include icon-bgc(icon-calendar());
+}

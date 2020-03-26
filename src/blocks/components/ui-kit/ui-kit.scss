@@ -157,9 +157,11 @@ $button-search-width: 106px;
         cursor: pointer;
 
         &-text {
+            box-sizing: border-box;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+            padding-right: 30px;
         }
 
         & .hint {
@@ -239,7 +241,7 @@ $button-search-width: 106px;
             bottom: 0;
             left: auto;
             margin: auto;
-            //@extend .icon-calendar;
+            @extend .icon-calendar;
         }
     }
 }

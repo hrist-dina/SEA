@@ -1,87 +1,34 @@
 include ../ui-kit/ui-kit
 include ../select/select
+include ../icon/icon
+include ./online-services-expertise
+include ./online-services-letter
+include ./online-services-call
 
-mixin online-services(title = 'Заявка на проведение экспертизы')
-    .online-services
-        .__inner
-            .__title.form-title=title
-            form.form.__form
-                .__body
-                    .__row
-                        .__hulf
-                            +field('fio', 'ФИО')
-                        .__hulf
-                            +field('city', 'Город')
-                    .__row
-                        .__hulf
-                            +field('phone', 'Телефон')
-                        .__hulf
-                            +field('email', 'Email')
-                    .__row
-                        .__hulf
-                            +select([
-                                {
-                                    value: '1',
-                                    text: 'test'
-                                },
-                                {
-                                    value: '2',
-                                    text: 'test test'
-                                },
-                                {
-                                    value: '3',
-                                    text: 'test test test'
-                                }
-                            ],'who', 'Вы выступаете как')
-                        .__hulf
-                            +select([
-                                {
-                                    value: '1',
-                                    text: 'test'
-                                },
-                                {
-                                    value: '2',
-                                    text: 'test test'
-                                },
-                                {
-                                    value: '3',
-                                    text: 'test test test'
-                                }
-                            ],'type', 'Вид экспертизы')
-                    .__row
-                        .__full
-                            +field-area('meterials', 'Перечень материалов и объектов, которые будут представлены на исследование')
-                            .__file
-                                +field-file('files', 'Прикрепить файл')
-                    .__row
-                        .__full
-                            +field-area('questions', 'Вопросы, которые будут поставлены на экспертизу')
+mixin online-services
+    .online-services.js-tabs
+        .__header
+            .__tabs-title
+                span Выберите интересующий вид экспертизы:
+            .tabs.__tabs
+                .__item.js-tabs-item.active(data-tab='expertise')
+                    .__icon
+                        +icon('expertise')
+                    .__title Проведение экспертизы
+                .__item.js-tabs-item(data-tab='letter')
+                    .__icon
+                        +icon('letter')
+                    .__title Проведение экспертизы
+                .__item.js-tabs-item(data-tab='review')
+                    .__icon
+                        +icon('review')
+                    .__title Рецензия
+                .__item.js-tabs-item(data-tab='call')
+                    .__icon
+                        +icon('call')
+                    .__title Обратный звонок
 
-                .__body
-                    .form-subtitle Данные для подготовки договора
-                    .form__block
-                        .form__block-title Для физических лиц
-                        .form__row
-                            .form__hulf
-                                +field('fio_physic', 'ФИО')
-                            .form__hulf
-                                +field('city_physic', 'Город')
-                        .form__row
-                            .form__hulf
-                                +field('passport_number_physic', 'Телефон')
-                            .form__hulf
-                                +field('passport_series_physic', 'Email')
-                        .form__row
-                            .form__full
-                                +field-area('passport_who_physic', 'Кем и когда выдан паспорт')
-                    .form__block
-                        .form__block-title Для юридических лиц
-                        .form__row
-                            .form__full
-                                .form__file
-                                    +field-file('card_org', 'Прикрепить карточку организации')
-                .__footer
-                    .__button
-                        +button('Отправить', false, 'submit')(class='consultation__button')
-                    .__policy.consultation__policy Нажимая на кнопку «Отправить», вы подтверждаете свое согласие на обработку персональных данных
-
+        .__body.js-tabs-content
+            +online-service-expertise
+            +online-service-letter
+            +online-service-call

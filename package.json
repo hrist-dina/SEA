@@ -74,7 +74,8 @@
         "jquery": "^3.4.1",
         "smart-grid": "^2.1.2",
         "swiper": "^5.3.1",
-        "select2": "^4.0.13"
+        "select2": "^4.0.13",
+        "inputmask": "^5.0.3"
     },
     "husky": {
         "hooks": {
