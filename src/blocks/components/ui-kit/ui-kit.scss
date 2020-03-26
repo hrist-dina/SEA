@@ -70,6 +70,13 @@ $button-search-width: 106px;
         padding-right: 48px;
     }
 
+    &--big {
+        @include sm-block {
+            padding: 18px 48px;
+        }
+        padding: 18px;
+    }
+
     &--subscribe {
         width: 142px;
         padding: 12px 18px;

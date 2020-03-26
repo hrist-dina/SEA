@@ -1,0 +1,41 @@
+.presentation {
+
+    @include lg-block {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 56px 80px 60px 90px;
+    }
+    @include sm-block {
+        padding: 32px;
+    }
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background: #f7f7f7;
+    padding: 16px;
+
+    &__data {
+        @include lg-block {
+            margin-bottom: 0;
+            width: #{calc(100% - 320px)};
+        }
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        font-weight: $title-font;
+        font-size: 35px;
+        line-height: 48px;
+        color: #233d63;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 520px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
+        color: #1a3c40;
+    }
+}

@@ -92,6 +92,17 @@ h3, .h3 {
         line-height: 32px;
     }
 
+    & img {
+        max-width: 100%;
+        margin-bottom: 32px;
+        display: block;
+
+        @include sm-block {
+            margin-bottom: 64px;
+
+        };
+    }
+
     h3, .h3 {
 
         @include sm-block {
@@ -113,32 +124,42 @@ h3, .h3 {
 
     }
 
-    ul {
-        list-style: none;
+    ul, ol {
         margin-top: 10px;
         margin-bottom: 20px;
+        padding-left: 0;
 
         @include sm-block {
-            padding-left: 30px;
+            padding-left: 22px;
             margin-top: 20px;
             margin-bottom: 40px;
         }
 
         & li {
-            padding-left: 22px;
             position: relative;
             margin-left: 17px;
             margin-bottom: 20px;
 
             @include sm-block {
-                padding-left: 35px;
                 margin-left: 0;
             }
 
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
 
+    ul {
+        list-style: none;
+
+        li {
+            padding-left: 22px;
+
+            @include sm-block {
+                padding-left: 35px;
+                margin-left: 0;
+            }
             &:before {
                 content: '';
                 position: absolute;
