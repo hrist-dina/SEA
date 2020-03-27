@@ -2,10 +2,10 @@ include ../ui-kit/ui-kit
 include ../select/select
 include ../icon/icon
 
-mixin online-service-expertise
-    .online-service.active(data-tab-content='expertise')
+mixin online-service-review
+    .online-service.active(data-tab-content='review')
         .__inner
-            .__title.form-title Заявка на проведение экспертизы
+            .__title.form-title Заявка на проведение рецензирования
             form.form.__form
                 .__body
                     .__row
@@ -48,7 +48,7 @@ mixin online-service-expertise
                                     value: '3',
                                     text: 'test test test'
                                 }
-                            ],'type', 'Вид экспертизы')
+                            ],'type', 'Вид рецензируемой экспертизы')
                     .__row
                         .__full
                             +field-area('meterials', 'Перечень материалов и объектов, которые будут представлены на исследование')
@@ -60,27 +60,27 @@ mixin online-service-expertise
 
                 .__body
                     .form-subtitle Данные для подготовки договора
-                    .form__block
-                        .form__block-title Для физических лиц
-                        .form__row
-                            .form__hulf
-                                +field('fio_physic', 'ФИО')
-                            .form__hulf
-                                +field('city_physic', 'Город')
-                        .form__row
-                            .form__hulf
-                                +field('passport_number_physic', 'Номер паспорта')
-                            .form__hulf
-                                +field('passport_series_physic', 'Серия паспорта')
-                        .form__row
-                            .form__full
-                                +field-area('passport_who_physic', 'Кем и когда выдан паспорт')
-                    .form__block
-                        .form__block-title Для юридических лиц
-                        .form__row
-                            .form__full
-                                .form__file
-                                    +field-file('card_org', 'Прикрепить карточку организации')
+                    .form__row
+                        .form__hulf
+                            +field('fio_contract', 'ФИО')
+                        .form__hulf
+                            +field(
+                                'date_birth_contract',
+                                'Дата рождения',
+                                false,
+                                'field--date'
+                            )(
+                                data-validator-require='true'
+                                class='js-mask-date'
+                            )
+                    .form__row
+                        .form__hulf
+                            +field('passport_number_contract', 'Номер паспорта')
+                        .form__hulf
+                            +field('passport_series_contract', 'Серия паспорта')
+                    .form__row
+                        .form__full
+                            +field-area('passport_who_contract', 'Кем и когда выдан паспорт')
                 .__footer
                     .__button
                         +button('Отправить', false, 'submit')(class='consultation__button')
