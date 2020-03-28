@@ -1,0 +1,14 @@
+include ../ui-kit/ui-kit
+include ../section/section
+
+
+mixin not-found
+    +section(false, 'section--inner-page')
+        .container
+            .not-found
+                h1.h1.__title=title
+                .__message Извините, но мы не смогли найти такую страницу :( Попробуйте вернуться на главную страницу и начать поиск заново.
+                .__button
+                    +button-link('На главную', 'big', '/')
+                .__img
+                    img(src='img/not-found/404.svg')

@@ -1,1 +1,15 @@
-h3 Page not found
+extends ../layouts/default
+include ../../blocks/components/not-found/not-found
+
+block variables
+    - const title = "Ой!..";
+    - h1 = title
+
+
+block content
+    +not-found
+
+
+
+
+
