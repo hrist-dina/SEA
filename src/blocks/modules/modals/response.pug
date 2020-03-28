@@ -1,0 +1,28 @@
+include ../../components/ui-kit/ui-kit
+include ../../components/icon/icon
+
+.modal.js-modal(data-modal-type='response')
+    +icon('cross', ['modal__close', 'js-modal-close'])
+    .modal__inner
+        form(action='/html/json.php', method='post').form.modal__form.validator
+            .form-title Отправить отклик
+            .form__body
+                .form__row
+                    .form__full
+                        +field('name', 'Ваше имя')(data-validator-require='true')
+                .form__row
+                    .form__full
+                        +field('phone', 'Номер телефона')(data-validator-require='true' data-validator-type='phone' class='js-mask-phone')
+                .form__row
+                    .form__full
+                        +field('email', 'Электронная почта')(data-validator-require='true')
+                .form__row
+                    .form__full
+                        +field-area('comment', 'Комментарий (необязательно)')
+                        .form__file
+                            +field-file('files', 'Прикрепить файл')
+
+            .__footer
+                .__button
+                    +button('Отправить', false, 'submit')(class='consultation__button')
+                .__policy.consultation__policy Нажимая на кнопку «Отправить», вы подтверждаете свое согласие на обработку персональных данных

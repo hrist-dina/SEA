@@ -10,6 +10,32 @@
         padding: 32px 20px 40px;
     }
 
+    &__field {
+        @include md-block {
+            margin-bottom: 34px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        margin-bottom: 24px;
+
+        &--center {
+            align-items: center;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__button {
+        @include md-block {
+            margin-top: 64px;
+        }
+        margin-top: 32px;
+    }
+
+
     &__close {
         @include md-block {
             top: 40px;
@@ -18,5 +44,69 @@
         position: absolute;
         top: 15px;
         right: 15px;
+    }
+
+    &__title {
+        @extend .form-title;
+    }
+
+    &__policy {
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        color: #84888a;
+        max-width: 300px;
+        margin: 16px auto 0;
+    }
+
+    &__half {
+        @include md-block {
+            width: #{calc(50% - 16px)};
+            margin-bottom: 0;
+        }
+        width: 100%;
+
+        margin-bottom: 24px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__half &__policy {
+        margin: auto;
+        text-align: left;
+    }
+
+    &__challenger-call {
+        width: 100%;
+        max-width: 782px;
+    }
+
+    &__box {
+        box-sizing: border-box;
+        height: 100%;
+        min-height: 80vh;
+        padding-top: 40px;
+    }
+
+    &__content {
+        box-sizing: border-box;
+        padding-top: 40px;
+    }
+
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    &-list {
+        display: none;
+    }
+
+    & .calc__text {
+        position: absolute;
+        &.active {
+            position: relative;
+        }
     }
 }
