@@ -1,0 +1,9 @@
+include ../../components/ui-kit/ui-kit
+include ../../components/icon/icon
+
+.modal.js-modal(data-modal-type='success-callback')
+    +icon('cross', ['modal__close', 'js-modal-close'])
+    .modal__inner
+        .modal__title Спасибо!
+        .modal__text Заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.
+        +button-link('Ок', 'full')(class='js-modal-close')

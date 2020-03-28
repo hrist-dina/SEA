@@ -90,6 +90,10 @@
     @return "data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 6C19.552 6 20 6.448 20 7V19C20 19.552 19.552 20 19 20H5C4.448 20 4 19.552 4 19V7C4 6.448 4.448 6 5 6H7V4H10V6H14V4H17V6H19ZM18 18V9H6V18H18ZM8 11H10V13H8V11ZM11 11H13V13H11V11Z' fill='%23#{$color}'/%3E%3C/svg%3E%0A";
 }
 
-@function icon-cross($color: '64697A') {
+@function icon-search-cross($color: '64697A') {
     @return "data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.07107 19.2132L12.1421 12.1421M19.2132 5.07102L12.1421 12.1421M12.1421 12.1421L19.2132 19.2132M12.1421 12.1421L5.24986 5.24981L5.07107 5.07102' stroke='%23#{$color}' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A";
+}
+
+@function icon-cross($color: '1A3C40') {
+    @return "data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 29L1 1M1 29L29 1L1 29Z' stroke='%23#{$color}' stroke-opacity='0.3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A";
 }

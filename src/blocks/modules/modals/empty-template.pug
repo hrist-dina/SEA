@@ -1,0 +1,9 @@
+include ../../components/ui-kit/ui-kit
+include ../../components/icon/icon
+
+.modal.js-modal(data-modal-type='template')
+    +icon('cross', ['modal__close', 'js-modal-close'])
+    .modal__inner
+        .modal__title Пример
+        .modal__text Шаблон пустого модального окна
+        +button-link('Ок')
