@@ -19,7 +19,7 @@ mixin footer
                             .footer__phones
                                 +phones-block
                             .footer__req-call
-                                +link-req-call('Заказать звонок')
+                                +link-req-call('Заказать звонок')(class='js-modal-open' data-modal-type='request-call')
                         .footer__email
                             a(href='mailto:info@sudagent.ru') info@sudagent.ru
                     .footer__menu

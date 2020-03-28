@@ -1,0 +1,30 @@
+include ../section/section
+include ../ui-kit/ui-kit
+
+mixin practice
+    .practice
+        .__header
+            .__title Прокурорская проверка бутика мирового бренда
+            .__options
+                .__options-item
+                    span Дело №:
+                    |
+                    |
+                    b 4815162342
+                .__options-item
+                    span Вид экспертизы:
+                    |
+                    |
+                    b название
+        .__footer
+            .__link
+                +button-link('Подробнее', 'nav', '#')
+
+
+mixin practice-section
+    +section
+        .practice-list
+            - let i = 0;
+            while i < 4
+                +practice
+                - i++

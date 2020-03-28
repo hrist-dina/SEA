@@ -1,0 +1,67 @@
+.practice {
+    @include lg-block {
+        padding: 48px 56px 40px;
+    }
+
+    @include md-block {
+        padding: 32px;
+    }
+    box-sizing: border-box;
+    padding: 16px;
+    background: #f7f7f7;
+    margin-bottom: 48px;
+
+    &__title {
+        @include md-block {
+            font-size: 32px;
+            line-height: 48px;
+            margin-bottom: 33px;
+        }
+        font-size: 24px;
+        line-height: 30px;
+        font-family: $title-font;
+        color: #233d63;
+        margin-bottom: 15px;
+    }
+
+    &__header {
+        @include md-block {
+            padding-bottom: 58px;
+        }
+        box-sizing: border-box;
+        border-bottom: 1px solid #d5d5d5;
+        padding-bottom: 20px;
+    }
+
+    &__options {
+        &-item {
+            @include md-block {
+                font-size: 20px;
+                line-height: 27px;
+                margin-bottom: 15px;
+            }
+            font-size: 16px;
+            line-height: 24px;
+            color: #64697a;
+            margin-bottom: 5px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__footer {
+        margin-top: 24px;
+    }
+
+    &__link {
+        text-align: right;
+        .button {
+            display: inline-block;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

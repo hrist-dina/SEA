@@ -1,0 +1,17 @@
+extends ../layouts/default
+include ../../blocks/components/practice/practice
+
+
+block variables
+	- const title = "Практика";
+	- h1 = title
+	include ../data/inner
+
+
+block content
+	+practice-section
+
+
+
+
+
