@@ -218,3 +218,8 @@
     @include wh(24px);
     @include icon-bgc(icon-calendar());
 }
+
+.icon-cross {
+    @include wh(24px);
+    @include icon-bgc(icon-cross());
+}

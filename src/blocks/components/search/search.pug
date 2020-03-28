@@ -4,7 +4,7 @@ mixin search
     include ../ui-kit/ui-kit
     include ../icon/icon
     .search
-        +icon('search', ['search__icon-mobile'])
+        +icon('search', ['search__icon-mobile', 'js-header-search-open'])
         form(action='' method='GET').__form
             input.__input(name='q' placeholder='Поиск по сайту')
-            +button('Найти', 'search', 'submit')
+        +icon('cross', ['search__icon-cross', 'js-header-search-close'])

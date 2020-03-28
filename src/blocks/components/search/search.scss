@@ -1,7 +1,12 @@
 .search {
+    line-height: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
 
     &__form {
         display: none;
+        width: #{calc(100% - 30px)};
     }
 
     &__input {
@@ -9,11 +14,15 @@
         box-sizing: border-box;
         width: 100%;
         border: none;
-        padding: 6px 52px 6px 48px;
-        font-size: 16px;
+        padding: 13px 40px 13px 40px;
+        font-size: 18px;
         line-height: 24px;
-        color: #898989;
-        background: #f8f8f8 url(icon-search()) no-repeat 16px;
+        color: #64697a;
+        background: transparent url(icon-search()) no-repeat 0;
         background-size: 20px;
+    }
+
+    &__icon-cross {
+        display: none;
     }
 }

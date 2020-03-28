@@ -1,9 +1,6 @@
 
 .menu {
-    @include sm-block {
-        display: flex;
-    }
-    display: none;
+    display: flex;
     align-items: center;
     position: relative;
 
