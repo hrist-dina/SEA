@@ -1,10 +1,16 @@
-//- Форма поиска в хедере
+include ../ui-kit/ui-kit
 
-mixin search
+//- Форма поиска в хедере и на странице поиска
+
+mixin search(isSearchPage = false)
     include ../ui-kit/ui-kit
     include ../icon/icon
-    .search
-        +icon('search', ['search__icon-mobile', 'js-header-search-open'])
+    .search(class=isSearchPage ? 'search--result' : '')
+        if !isSearchPage
+            +icon('search', ['search__icon-mobile', 'js-header-search-open'])
         form(action='' method='GET').__form
             input.__input(name='q' placeholder='Поиск по сайту')
-        +icon('search-cross', ['search__icon-cross', 'js-header-search-close'])
+            if isSearchPage
+                +button('Найти', 'search-result', 'submit')
+        if !isSearchPage
+            +icon('search-cross', ['search__icon-cross', 'js-header-search-close'])

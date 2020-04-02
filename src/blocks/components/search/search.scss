@@ -25,4 +25,28 @@
     &__icon-cross {
         display: none;
     }
+
+    &--result & {
+        width: 100%;
+
+        &__form {
+            @include sm-block {
+                flex-direction: row;
+            }
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__input {
+            @include sm-block {
+                width: #{calc(100% - 220px)};
+                margin-right: 40px;
+                margin-bottom: 0;
+            }
+            border-bottom: 1px solid rgba(26, 60, 64, 0.3);
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
 }

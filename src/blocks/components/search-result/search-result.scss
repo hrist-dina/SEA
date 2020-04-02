@@ -1,0 +1,105 @@
+.search-result {
+
+    &__header {
+        @include sm-block {
+            margin-bottom: 48px;
+        }
+        margin-bottom: 32px;
+    }
+
+    &__total {
+        @include sm-block {
+            margin-top: 24px;
+        }
+        font-size: 16px;
+        line-height: 22px;
+        color: #90a4af;
+        margin-top: 16px;
+    }
+
+    &__item {
+        @include sm-block {
+            padding: 48px 56px 32px;
+        }
+        box-sizing: border-box;
+        background: #f7f7f7;
+        padding: 24px;
+        margin-bottom: 16px;
+        text-decoration: none;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        @include sm-block {
+            font-size: 32px;
+            line-height: 48px;
+            margin-bottom: 16px;
+        }
+
+        font-family: $title-font;
+        color: #233d63;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration: none;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    &__text {
+        @include sm-block {
+            font-size: 20px;
+            line-height: 32px;
+        }
+        color: #393e46;
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    &__meta {
+        @include sm-block {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 32px;
+            padding-top: 24px;
+        }
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 16px;
+        border-top: 1px solid #d4d4d4;
+        padding-top: 16px;
+    }
+
+    &__type {
+        @include sm-block {
+            margin-bottom: 0;
+        }
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #007b75;
+        margin-bottom: 8px;
+        text-decoration: none;
+    }
+
+    &__date {
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #999999;
+    }
+
+    &__pagination {
+        @include sm-block {
+            margin-top: 80px;
+        }
+        margin-top: 40px;
+        text-align: center;
+    }
+}

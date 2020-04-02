@@ -1,0 +1,32 @@
+include ../ui-kit/ui-kit
+include ../search/search
+
+
+mixin search-result
+    .search-result
+        .__header
+            .__form
+                +search(true)
+            .__total Найдено: 500 результатов
+        .__body
+            .__list
+                - let i = 0
+                while i < 7
+                    +search-result-item('Кто виноват и что делать? Разбираемся')
+                    - i++
+            .__pagination
+                +button-show-more
+
+
+
+mixin search-result-item(title)
+    .search-result__item
+        a(href='#').search-result__title=title
+        .search-result__text Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами...
+        .search-result__meta
+            // Тут не ясно должно быть ссылкой или нет
+            a(href='#').search-result__type Карточки
+            .search-result__date Изменено:
+                |
+                |
+                span 12.02.2020

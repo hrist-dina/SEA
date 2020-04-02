@@ -96,6 +96,16 @@ $button-search-width: 106px;
         align-items: center;
         justify-content: center;
     }
+
+
+    &--search-result {
+        @include sm-block {
+            padding: 16px 48px;
+        }
+        box-sizing: border-box;
+        min-width: 180px;
+        padding: 12px 26px;
+    }
 }
 
 

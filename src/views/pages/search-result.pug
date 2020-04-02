@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+include ../../blocks/components/search-result/search-result
+
+block variables
+	- const title = "Результаты поиска";
+	- const h1 = title;
+	include ../data/inner
+
+block content
+	+search-result
+
+
+
+
