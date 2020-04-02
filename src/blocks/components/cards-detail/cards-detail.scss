@@ -96,18 +96,24 @@
             justify-content: center;
             position: relative;
             padding: 0 16px;
+            &:before, &:after {
+                @include wh(6px);
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                background: #007b75;
+            }
+
             &:before {
+                right: auto;
                 left: 0;
             }
 
             &:after {
                 right: 0;
-            }
-            &:before, &:after {
-                @include wh(6px);
-                content: "";
-                position: absolute;
-                background: #007b75;
+                left: auto;
             }
         }
     }
