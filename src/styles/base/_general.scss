@@ -206,3 +206,52 @@ h3, .h3 {
         }
     }
 }
+
+body .validator {
+    &-error {
+        @include placeholder {
+            color: #d73124;
+        }
+        position: relative;
+        border-bottom-color: #d73124;
+        font-size: 14px;
+        line-height: 26px;
+        color: #d73124;
+        font-weight: 500;
+    }
+
+    &-error-message {
+        display: none;
+        position: absolute;
+        top: 38px;
+        overflow: hidden;
+        font-size: 12px;
+        color: #d73124;
+        font-weight: 500;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    & [type="submit"]:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+}
+
+body .validator .validator-error .field__placeholder, body .validator .validator-error .field-select__placeholder {
+    color: #d73124;
+}
+
+body .validator .validator-error .validator-error-message {
+    display: block;
+}
+
+body .validator .validator-error textarea {
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+body .validator .validator-error textarea + .validator-error-message {
+    top: auto;
+    bottom: 0;
+}
