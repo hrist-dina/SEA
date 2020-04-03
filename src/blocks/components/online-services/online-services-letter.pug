@@ -6,21 +6,21 @@ mixin online-service-letter
     .online-service(data-tab-content='letter')
         .__inner
             .__title.form-title Заявка на информационное письмо для суда
-            form.form.__form
+            form.form.__form.validator.js-form-service
                 .__body
                     .__row
                         .__hulf
-                            +field('fio', 'ФИО')
+                            +field('fio', 'ФИО')(data-validator-require='true')
                         .__hulf
-                            +field('city', 'Город')
+                            +field('city', 'Город')(data-validator-require='true')
                     .__row
                         .__hulf
-                            +field('phone', 'Телефон')(class='js-mask-phone')
+                            +field('phone', 'Телефон')(data-validator-require='true' data-validator-type='phone' class='js-mask-phone')
                         .__hulf
-                            +field('email', 'Email')
+                            +field('email', 'Email')(data-validator-require='true' data-validator-type='email')
                     .__row
                         .__full
-                            +field-area('post_address', 'Полный почтовый адрес')
+                            +field-area('post_address', 'Полный почтовый адрес')(data-validator-require='true')
                     .__row
                         .__hulf
                             +select([
@@ -36,7 +36,7 @@ mixin online-service-letter
                                     value: '3',
                                     text: 'test test test'
                                 }
-                            ],'delivery_method', 'Способ доставки информационного письма')
+                            ],'delivery_method', 'Способ доставки информационного письма')(data-validator-require='true')
                         .__hulf
                             +field(
                                 'date',
@@ -62,7 +62,7 @@ mixin online-service-letter
                                     value: '3',
                                     text: 'test test test'
                                 }
-                            ],'speak', 'Вы выступаете как:')
+                            ],'speak', 'Вы выступаете как:')(data-validator-require='true')
                         .__hulf
                             +select([
                                 {
@@ -77,25 +77,24 @@ mixin online-service-letter
                                     value: '3',
                                     text: 'test test test'
                                 }
-                            ], 'side', 'Вы представляете сторону:')
-
+                            ], 'side', 'Вы представляете сторону:')(data-validator-require='true')
 
                 .__body
                     .form-subtitle Реквизиты судебного дела
                     .form__row
                         .form__hulf
-                            +field('court', 'Суд, в котором рассматривается дело')
+                            +field('court', 'Суд, в котором рассматривается дело')(data-validator-require='true')
                         .form__hulf
-                            +field('number_case', 'Номер дела')
+                            +field('number_case', 'Номер дела')(data-validator-require='true')
                     .form__row
                         .form__full
-                            +field('fio_referee', 'ФИО судьи')
+                            +field('fio_referee', 'ФИО судьи')(data-validator-require='true')
                     .form__row
                         .form__full
-                            +field-area('plaintiff', 'Полное наименование истца')
+                            +field-area('plaintiff', 'Полное наименование истца')(data-validator-require='true')
                     .form__row
                         .form__full
-                            +field-area('defendant', 'Полное наименование ответчика')
+                            +field-area('defendant', 'Полное наименование ответчика')(data-validator-require='true')
                 .__body
                     .form__block-title Описание требуемого исследования
                     .__row
@@ -113,15 +112,15 @@ mixin online-service-letter
                                     value: '3',
                                     text: 'test test test'
                                 }
-                            ],'type_expertise', 'Вы экспертизы')
+                            ],'type_expertise', 'Вы экспертизы')(data-validator-require='true')
                     .__row
                         .__full
-                            +field-area('meterials', 'Перечень материалов и объектов, которые будут представлены на исследование')
+                            +field-area('meterials', 'Перечень материалов и объектов, которые будут представлены на исследование')(data-validator-require='true')
                             .__file
-                                +field-file('files', 'Прикрепить файл')
+                                +field-file('files', 'Прикрепить файл')(data-validator-require='true')
                     .form__row
                         .form__full
-                            +field-area('questions', 'Вопросы, которые будут поставлены на экспертизу')
+                            +field-area('questions', 'Вопросы, которые будут поставлены на экспертизу')(data-validator-require='true')
                 .__footer
                     .__button
                         +button('Отправить', false, 'submit')(class='consultation__button')

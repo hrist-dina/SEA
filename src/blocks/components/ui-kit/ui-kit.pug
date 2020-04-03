@@ -41,7 +41,7 @@ mixin field-area(name, placeholder, hintText = null, modifLabel=null)
         textarea.field__input.js-field-input(name=name type=type)&attributes(attributes)
 
 mixin field-file(name, placeholder)
-    label.field-file
+    label.field-file.js-field
         span.field-file__placeholder=placeholder
         input.field-file__input(name=name type='file')&attributes(attributes)
 

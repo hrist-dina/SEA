@@ -9,13 +9,13 @@ mixin consultation(title = 'Получить консультацию')
 
 mixin consultation-box
     .consultation__box
-        form(type='post').form.consultation__form
+        form(type='post').form.consultation__form.validator.js-form-request-call
             .__body
                 .__row
                     .__hulf
-                        +field('name','Ваше имя')
+                        +field('name','Ваше имя')(data-validator-require='true')
                     .__hulf
-                        +field('phone','Номер телефона')
+                        +field('phone','Номер телефона')(data-validator-require='true' data-validator-type='phone' class='js-mask-phone')
                 .__row
                     .__full
                         +field-area('comment', 'Комментарий (необязательно)')

@@ -4,7 +4,7 @@ include ../../components/icon/icon
 .modal.js-modal(data-modal-type='request-call')
     +icon('cross', ['modal__close', 'js-modal-close'])
     .modal__inner
-        form(action='/html/json.php', method='post').form.modal__form.validator
+        form(action='', method='post').form.modal__form.validator.js-form-request-call
             .form-title Заказать звонок
             .form__body
                 .form__row

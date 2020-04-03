@@ -16,10 +16,11 @@ export default class Validator {
         this.submitButton = this.form.find("[type=submit]");
         this.selectorError = "validator-error";
         this.selectorErrorMessage = "validator-error-message";
-        this.massages = {
+        this.messages = {
             required: "Поле обязательное для заполнения!",
             email: "Email адрес введен некорректно",
             phone: "Некорректный телефон!",
+            file: "Необходимо добавить минимум один файл",
         };
     }
 
@@ -39,6 +40,11 @@ export default class Validator {
         return !!string.search(
             /^\+7\s([0-9]{3})\s([0-9]{3})-([0-9]{2})-([0-9]{2})$/i
         );
+    }
+
+    static isFile(input) {
+        console.log(input);
+        return input.getAttribute("type") === "file";
     }
 
     removeErrorMessages() {
@@ -81,7 +87,10 @@ export default class Validator {
                 $(item).data(this.requireFiled) === true &&
                 this.constructor.checkEmpty(value)
             ) {
-                this.showErrorMessage(item, this.massages.required);
+                const message = this.constructor.isFile(item)
+                    ? this.messages.file
+                    : this.messages.required;
+                this.showErrorMessage(item, message);
                 error = 1;
             }
 
@@ -89,13 +98,13 @@ export default class Validator {
                 switch ($(item).data(this.typeFiled)) {
                 case "email":
                     if (this.constructor.checkEmail(value)) {
-                        this.showErrorMessage(item, this.massages.email);
+                        this.showErrorMessage(item, this.messages.email);
                         error = 1;
                     }
                     break;
                 case "phone":
                     if (this.constructor.checkPhone(value)) {
-                        this.showErrorMessage(item, this.massages.phone);
+                        this.showErrorMessage(item, this.messages.phone);
                         error = 1;
                     }
                     break;
