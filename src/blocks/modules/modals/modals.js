@@ -1,6 +1,6 @@
-import $ from "jquery";
-import { BaseModal } from "%classes%/BaseModal";
+import $ from "jquery"
+import { BaseModal } from "%classes%/BaseModal"
 
 $(() => {
-    new BaseModal();
-});
+    new BaseModal()
+})

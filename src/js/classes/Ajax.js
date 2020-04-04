@@ -1,37 +1,37 @@
-import $ from "jquery";
+import $ from "jquery"
 
 export class Ajax {
     constructor(selector) {
-        this.selector = selector;
+        this.selector = selector
         if (typeof this.selector === "string") {
-            this.element = $(document).find(this.selector);
+            this.element = $(document).find(this.selector)
         } else if (typeof this.selector === "object") {
-            this.element = this.selector;
+            this.element = this.selector
         }
 
-        this._data = {};
+        this._data = {}
 
-        this.init();
+        this.init()
     }
 
     get data() {
         if ($.isEmptyObject(this._data)) {
-            return this.element.serialize();
+            return this.element.serialize()
         }
-        return this._data;
+        return this._data
     }
 
     set data(value) {
-        this._data = value;
-        return this;
+        this._data = value
+        return this
     }
 
     get url() {
-        const dataAction = this.element.data("action");
+        const dataAction = this.element.data("action")
         if (dataAction) {
-            return dataAction;
+            return dataAction
         }
-        return this.element.attr("action");
+        return this.element.attr("action")
     }
 
     init() {
@@ -40,26 +40,26 @@ export class Ajax {
 
     submit() {
         this.element.on("submit", e => {
-            e.preventDefault();
+            e.preventDefault()
             if (this.validate()) {
-                this.post();
+                this.post()
             } else {
-                console.log("validated - false");
+                console.log("validated - false")
             }
-        });
-        return this;
+        })
+        return this
     }
 
     validate() {
-        return true;
+        return true
     }
 
     onChange() {
         this.element.on("change", e => {
-            e.preventDefault();
-            this.get();
-        });
-        return this;
+            e.preventDefault()
+            this.get()
+        })
+        return this
     }
 
     ajax(method) {
@@ -69,30 +69,30 @@ export class Ajax {
             data: this.data,
         })
             .done(this.done.bind(this))
-            .fail(this.fail.bind(this));
+            .fail(this.fail.bind(this))
     }
 
     post() {
-        this.ajax("post");
-        return this;
+        this.ajax("post")
+        return this
     }
 
     get() {
-        this.ajax("get");
-        return this;
+        this.ajax("get")
+        return this
     }
 
     done(data) {
         // Реализовать у дочернего класса
         if (data) {
-            return true;
+            return true
         }
-        return false;
+        return false
     }
 
     fail(error) {
         // Реализовать у дочернего класса
-        console.log("fail");
-        console.log(error);
+        console.log("fail")
+        console.log(error)
     }
 }

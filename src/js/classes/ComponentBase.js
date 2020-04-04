@@ -1,8 +1,8 @@
 export default class ComponentBase {
     constructor(selector) {
-        this.selector = selector;
+        this.selector = selector
 
-        this.init();
+        this.init()
     }
 
     init() {

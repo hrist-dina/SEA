@@ -1,48 +1,48 @@
 /* global ymaps */
-import $ from "jquery";
+import $ from "jquery"
 
 export default class Map {
     constructor(id, options) {
-        this.map = id;
-        this.idZoomIn = "zoom-in";
-        this.idZoomOut = "zoom-out";
-        this.options = options;
-        this.classData = ".js-map-data";
-        this.classDataItem = `${this.classData}-item`;
+        this.map = id
+        this.idZoomIn = "zoom-in"
+        this.idZoomOut = "zoom-out"
+        this.options = options
+        this.classData = ".js-map-data"
+        this.classDataItem = `${this.classData}-item`
 
-        this.items = [];
+        this.items = []
 
-        this.init();
+        this.init()
     }
 
     init() {
-        this.initGetDataOptions();
+        this.initGetDataOptions()
     }
 
     initGetDataOptions() {
         $(document)
             .find(this.classData)
             .each((i, dataMap) => {
-                this.mapData(dataMap);
+                this.mapData(dataMap)
                 $(dataMap)
                     .find(this.classDataItem)
                     .each((n, item) => {
-                        this.items.push(this.itemData(item));
-                    });
+                        this.items.push(this.itemData(item))
+                    })
 
                 if ($(`#${this.map}`).length) {
-                    this.initMap();
+                    this.initMap()
                 }
-            });
+            })
     }
 
     mapData(map) {
-        this.map = $(map).data("map-id");
+        this.map = $(map).data("map-id")
 
         this.options = {
             center: [$(map).data("center-x"), $(map).data("center-y")],
             zoom: $(map).data("zoom"),
-        };
+        }
     }
 
     itemData(element) {
@@ -50,11 +50,11 @@ export default class Map {
             locationX: $(element).data("location-x"),
             locationY: $(element).data("location-y"),
             hint: $(element).data("hint"),
-        };
+        }
     }
 
     isMobile() {
-        return $(window).width() <= 992;
+        return $(window).width() <= 992
     }
 
     get zoomTemplate() {
@@ -63,7 +63,7 @@ export default class Map {
             `<div id='${this.idZoomIn}' class='plus'></div>` +
             `<div id='${this.idZoomOut}' class='minus'></div>` +
             "</div>"
-        );
+        )
     }
 
     get controlOptions() {
@@ -72,57 +72,57 @@ export default class Map {
                 top: this.isMobile() ? 25 : 45,
                 right: this.isMobile() ? 15 : 35,
             },
-        };
+        }
     }
 
     get location() {
-        return this.options.location;
+        return this.options.location
     }
 
     get center() {
-        return this.options.center;
+        return this.options.center
     }
 
     get hint() {
-        return this.options.hint;
+        return this.options.hint
     }
 
     get zoom() {
-        return this.options.zoom;
+        return this.options.zoom
     }
 
     destroyMap() {
         if (this.mapObject) {
-            this.mapObject.destroy();
+            this.mapObject.destroy()
         }
     }
 
     initMap() {
-        this.destroyMap();
+        this.destroyMap()
         ymaps.ready().then(() => {
             try {
                 let map = new ymaps.Map(this.map, {
                     center: this.center,
                     zoom: this.zoom,
                     controls: [],
-                });
+                })
 
-                map.behaviors.disable("scrollZoom");
+                map.behaviors.disable("scrollZoom")
 
-                let placemark = this.getPlaceMark();
+                let placemark = this.getPlaceMark()
 
-                map.geoObjects.add(placemark);
+                map.geoObjects.add(placemark)
 
                 map.setBounds(placemark.getBounds()).then(() => {
-                    if (map.getZoom() > this.zoom) map.setZoom(this.zoom);
-                });
+                    if (map.getZoom() > this.zoom) map.setZoom(this.zoom)
+                })
 
-                map.controls.add(this.initZoomControl(), this.controlOptions);
-                this.mapObject = map;
+                map.controls.add(this.initZoomControl(), this.controlOptions)
+                this.mapObject = map
             } catch (e) {
-                console.error(e);
+                console.error(e)
             }
-        });
+        })
     }
 
     getPlaceMark() {
@@ -131,7 +131,7 @@ export default class Map {
             let collection = new ymaps.GeoObjectCollection(null, {
                 // Запретим появление балуна.
                 hasBalloon: false,
-            });
+            })
 
             // Добавляем метки с городами
             this.items.forEach(item => {
@@ -140,12 +140,12 @@ export default class Map {
                         [item.locationX, item.locationY],
                         item.hint
                     )
-                );
-            });
+                )
+            })
 
-            return collection;
+            return collection
         } catch (e) {
-            console.error(e);
+            console.error(e)
         }
     }
     createPlaceMark(location = false, hint = false) {
@@ -168,11 +168,11 @@ export default class Map {
                 // её "ножки" (точки привязки).
                 iconImageOffset: [-30, -68],
             }
-        );
+        )
     }
 
     initZoomControl() {
-        const self = this;
+        const self = this
 
         // Создадим пользовательский макет ползунка масштаба.
         let ZoomLayout = ymaps.templateLayoutFactory.createClass(
@@ -182,43 +182,43 @@ export default class Map {
                 // при построении и очистке макета.
                 build: function() {
                     // Вызываем родительский метод build.
-                    ZoomLayout.superclass.build.call(this);
+                    ZoomLayout.superclass.build.call(this)
 
                     // Привязываем функции-обработчики к контексту и сохраняем ссылки
                     // на них, чтобы потом отписаться от событий.
-                    this.zoomInCallback = ymaps.util.bind(this.zoomIn, this);
-                    this.zoomOutCallback = ymaps.util.bind(this.zoomOut, this);
+                    this.zoomInCallback = ymaps.util.bind(this.zoomIn, this)
+                    this.zoomOutCallback = ymaps.util.bind(this.zoomOut, this)
 
                     // Начинаем слушать клики на кнопках макета.
-                    $(`#${self.idZoomIn}`).bind("click", this.zoomInCallback);
-                    $(`#${self.idZoomOut}`).bind("click", this.zoomOutCallback);
+                    $(`#${self.idZoomIn}`).bind("click", this.zoomInCallback)
+                    $(`#${self.idZoomOut}`).bind("click", this.zoomOutCallback)
                 },
 
                 clear: function() {
                     // Снимаем обработчики кликов.
-                    $(`#${self.idZoomIn}`).unbind("click", this.zoomInCallback);
+                    $(`#${self.idZoomIn}`).unbind("click", this.zoomInCallback)
                     $(`#${self.idZoomOut}`).unbind(
                         "click",
                         this.zoomOutCallback
-                    );
+                    )
 
                     // Вызываем родительский метод clear.
-                    ZoomLayout.superclass.clear.call(this);
+                    ZoomLayout.superclass.clear.call(this)
                 },
 
                 zoomIn: function() {
-                    var map = this.getData().control.getMap();
-                    map.setZoom(map.getZoom() + 1, { checkZoomRange: true });
+                    var map = this.getData().control.getMap()
+                    map.setZoom(map.getZoom() + 1, { checkZoomRange: true })
                 },
 
                 zoomOut: function() {
-                    var map = this.getData().control.getMap();
-                    map.setZoom(map.getZoom() - 1, { checkZoomRange: true });
+                    var map = this.getData().control.getMap()
+                    map.setZoom(map.getZoom() - 1, { checkZoomRange: true })
                 },
             }
-        );
+        )
         return new ymaps.control.ZoomControl({
             options: { layout: ZoomLayout },
-        });
+        })
     }
 }

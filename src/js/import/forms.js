@@ -1,20 +1,20 @@
-import $ from "jquery";
+import $ from "jquery"
 import {
     selectorService,
     Service,
-} from "../froms/Service";
+} from "../froms/Service"
 
-import { selectorRequestCall, RequestCall } from "../froms/RequestCall";
+import { selectorRequestCall, RequestCall } from "../froms/RequestCall"
 
 $(() => {
     $(document)
         .find(selectorService)
         .each((i, item) => {
-            new Service($(item)).submit();
-        });
+            new Service($(item)).submit()
+        })
     $(document)
         .find(selectorRequestCall)
         .each((i, item) => {
-            new RequestCall($(item)).submit();
-        });
-});
+            new RequestCall($(item)).submit()
+        })
+})

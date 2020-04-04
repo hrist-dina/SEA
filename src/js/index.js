@@ -1,3 +1,3 @@
-import "./import/modules";
-import "./import/components";
-import "./import/forms";
+import "./import/modules"
+import "./import/components"
+import "./import/forms"
