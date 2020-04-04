@@ -12,9 +12,15 @@
     }
 
     &__link {
+        @include transitionEaseOutQuint(border);
         text-decoration: none;
         font-size: 18px;
         line-height: 34px;
         color: $menu-color;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-bottom-color: $menu-color;
+        }
     }
 }

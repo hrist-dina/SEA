@@ -75,9 +75,9 @@ mixin online-service-review
                             )
                     .form__row
                         .form__hulf
-                            +field('passport_number_contract', 'Номер паспорта')(data-validator-require='true')
+                            +field('passport_number_contract', 'Номер паспорта')(data-validator-require='true' class='js-mask-passport-number')
                         .form__hulf
-                            +field('passport_series_contract', 'Серия паспорта')(data-validator-require='true')
+                            +field('passport_series_contract', 'Серия паспорта')(data-validator-require='true' class='js-mask-passport-series')
                     .form__row
                         .form__full
                             +field-area('passport_who_contract', 'Кем и когда выдан паспорт')(data-validator-require='true')

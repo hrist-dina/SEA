@@ -102,6 +102,7 @@
     }
 
     &__icon {
+        @include transitionEaseOutQuint(all);
         @include md-block {
             height: 180px;
         }
@@ -112,6 +113,27 @@
         width: 100%;
         height: 120px;
         border: 1px solid rgba(0, 123, 117, 0.25);
+    }
+
+    &__item:hover &__icon {
+        background: rgba(0, 123, 117, 0.5);
+        border-color: rgba(0, 123, 117, 0.5);
+
+        & .icon-expertise {
+            background-image: url(icon-expertise('64697a'));
+        }
+
+        & .icon-letter {
+            background-image: url(icon-letter('64697a'));
+        }
+
+        & .icon-review {
+            background-image: url(icon-review('64697a'));
+        }
+
+        & .icon-call {
+            background-image: url(icon-call('64697a'));
+        }
     }
 
     &__item.active &__icon {
@@ -134,6 +156,8 @@
             background-image: url(icon-call('fff'));
         }
     }
+
+
 
     &__title {
         @include md-block {

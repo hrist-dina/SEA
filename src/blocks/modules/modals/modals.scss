@@ -1,6 +1,8 @@
 .modal {
     max-width: 796px;
 
+
+
     &__inner {
         @include md-block {
             padding: 64px 80px 70px;
@@ -108,5 +110,9 @@
         &.active {
             position: relative;
         }
+    }
+
+    &--subscribe {
+        max-width: 500px;
     }
 }

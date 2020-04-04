@@ -101,9 +101,18 @@
     @include icon-bgc(icon-cards("007B75"));
 }
 
+@mixin icon-social {
+    @include transitionEaseOutQuint(opacity);
+
+    &:hover {
+        opacity: .7;
+    }
+}
+
 .icon-fb {
     @include wh(48px);
     @include icon-bgc(icon-fb());
+    @include icon-social;
     background-color: #3b5998;
     background-size: 24px;
 }
@@ -111,6 +120,7 @@
 .icon-telegram {
     @include wh(48px);
     @include icon-bgc(icon-telegram());
+    @include icon-social;
     background-color: #039be5;
     background-size: 24px;
 }
@@ -118,6 +128,7 @@
 .icon-vk {
     @include wh(48px);
     @include icon-bgc(icon-vk());
+    @include icon-social;
     background-color: #597da3;
     background-size: 24px;
 }

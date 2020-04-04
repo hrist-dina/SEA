@@ -5,6 +5,6 @@ mixin subscribe(title = 'Подпишитесь на рассылку')
     .subscribe
         if title
             .__title=title
-        form.__form
-            input(type='email' name='email' placeholder='Электронная почта').__input
+        form.__form.js-form-subscribe
+            input(type='email' name='email' placeholder='Электронная почта' required).__input
             +button('Подписаться', 'subscribe', 'submit')

@@ -10,6 +10,8 @@ export default class Mask {
     init() {
         new Mask(".js-mask-phone").phone()
         new Mask(".js-mask-date").date()
+        new Mask(".js-mask-passport-series").passportSeries()
+        new Mask(".js-mask-passport-number").passportNumber()
     }
 
     phone() {
@@ -24,6 +26,20 @@ export default class Mask {
             alias: "datetime",
             inputFormat: "dd.mm.yyyy",
             placeholder: "__.__.____",
+            showMaskOnHover: false,
+        }).mask(this.elem)
+    }
+
+    passportSeries() {
+        new Inputmask({
+            mask: "9999",
+            showMaskOnHover: false,
+        }).mask(this.elem)
+    }
+
+    passportNumber() {
+        new Inputmask({
+            mask: "999999",
             showMaskOnHover: false,
         }).mask(this.elem)
     }

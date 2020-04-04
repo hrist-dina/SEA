@@ -69,9 +69,9 @@ mixin online-service-expertise
                                 +field('city_physic', 'Город')(data-validator-require='true')
                         .form__row
                             .form__hulf
-                                +field('passport_number_physic', 'Номер паспорта')(data-validator-require='true')
+                                +field('passport_number_physic', 'Номер паспорта')(data-validator-require='true' class='js-mask-passport-number')
                             .form__hulf
-                                +field('passport_series_physic', 'Серия паспорта')(data-validator-require='true')
+                                +field('passport_series_physic', 'Серия паспорта')(data-validator-require='true' class='js-mask-passport-series')
                         .form__row
                             .form__full
                                 +field-area('passport_who_physic', 'Кем и когда выдан паспорт')(data-validator-require='true')

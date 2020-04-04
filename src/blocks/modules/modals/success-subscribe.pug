@@ -1,0 +1,9 @@
+include ../../components/ui-kit/ui-kit
+include ../../components/icon/icon
+
+.modal.modal--subscribe.js-modal(data-modal-type='success-subscribe')
+    +icon('cross', ['modal__close', 'js-modal-close'])
+    .__inner
+        .__title Спасибо!
+        .__text Заявка успешно отправлена.
+        +button-link('Ок', 'full')(class='js-modal-close')
