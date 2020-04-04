@@ -237,6 +237,51 @@ $button-search-width: 106px;
     &__input {
         display: none;
     }
+
+    &__list {
+        margin-top: 16px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #cccccc;
+
+        &:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+
+
+    &__data {
+        width: #{calc(100% - 32px)};
+    }
+
+    &__delete {
+        margin-left: 16px;
+    }
+
+    &__name {
+        font-size: 16px;
+        line-height: 20px;
+        color: #64697a;
+        margin-bottom: 3px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    &__size {
+        font-size: 12px;
+        line-height: 16px;
+        color: $base-color;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 }
 
 .field {

@@ -224,6 +224,11 @@
     @include icon-bgc(icon-search-cross());
 }
 
+.icon-delete {
+    @include wh(16px);
+    @include icon-bgc(icon-search-cross());
+}
+
 .icon-cross {
     @include wh(32px);
     @include icon-bgc(icon-cross());

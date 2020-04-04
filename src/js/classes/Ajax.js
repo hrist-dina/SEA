@@ -65,7 +65,9 @@ export class Ajax {
     ajax(method) {
         $.ajax(this.url, {
             method: method,
+            cache : false,
             dataType: "json",
+            processData: false,
             data: this.data,
         })
             .done(this.done.bind(this))

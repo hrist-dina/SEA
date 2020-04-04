@@ -12,13 +12,16 @@ class UiKit extends ComponentBase {
     }
 }
 
+export const selectorField = ".js-field"
+
 class Field extends ComponentBase {
-    constructor(selector = ".js-field") {
+    constructor(selector = selectorField) {
         super(selector)
     }
 
     init() {
         this.fieldInput = `${this.selector}-input`
+
         $(document)
             .find(this.selector)
             .each((i, elem) => {
@@ -65,5 +68,4 @@ class Field extends ComponentBase {
         }
     }
 }
-
 export { UiKit }

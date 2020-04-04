@@ -40,10 +40,10 @@ mixin field-area(name, placeholder, hintText = null, modifLabel=null)
                 +hint(hintText)
         textarea.field__input.js-field-input(name=name type=type)&attributes(attributes)
 
-mixin field-file(name, placeholder)
+mixin field-file(name, placeholder, isMultiple = true)
     label.field-file.js-field
         span.field-file__placeholder=placeholder
-        input.field-file__input(name=name type='file')&attributes(attributes)
+        input.field-file__input(name=`${name}${isMultiple ? '[]' : ''}` type='file' multiple!=isMultiple)&attributes(attributes)
 
 mixin button-show-more
     +button-transparent('Показать еще')(class='button--show-more')
