@@ -7,5 +7,5 @@ mixin menu(menuList)
     nav.menu
         ul.menu__list
             for item in menuList
-                li.menu__item
+                li.menu__item(class=item.isCurrent ? 'active' : '')
                     a(href='#').menu__link=item.name

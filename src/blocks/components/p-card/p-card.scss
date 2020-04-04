@@ -17,9 +17,12 @@
         margin-bottom: 16px;
         display: block;
         text-decoration: none;
+        position: relative;
+        overflow: hidden;
     }
 
     &__img {
+        @include transitionEaseOutQuint(all);
         @include sm-block {
             height: 292px;
         }
@@ -28,6 +31,10 @@
         background-position: center;
         background-repeat: no-repeat;
         height: 230px;
+    }
+
+    &:hover &__img {
+        transform: scale(1.1);
     }
 
     &__date {

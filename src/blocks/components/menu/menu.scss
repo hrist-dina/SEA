@@ -29,9 +29,20 @@
             font-size: 18px;
             line-height: 24px;
         }
+        @include transitionEaseOutQuint(border);
         text-decoration: none;
         font-size: 16px;
         line-height: 20px;
         color: $menu-color;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-bottom-color: $menu-color;
+        }
+    }
+
+    &__item.active &__link {
+        color: $button-color;
+        border-bottom-color: $button-color;
     }
 }

@@ -6,6 +6,8 @@ $button-search-width: 106px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
     border: none;
     padding: 12px 32px;
     background: $button-color;
@@ -23,8 +25,17 @@ $button-search-width: 106px;
         cursor: not-allowed;
     }
 
-    &:hover {
-        background: $button-color;
+
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: -80px;
+        width: 70px;
+        height: 120px;
+        transform: rotate(20deg);
+        background: rgba(255, 255, 255, .7);
     }
 
     &--full {
@@ -45,12 +56,41 @@ $button-search-width: 106px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: #393e46;
+        transition: all 300ms ease;
+
+        &:after {
+            content: none;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            left: auto;
+            width: 0%;
+            height: 100%;
+            transition: all 300ms ease;
+            background: $button-color;
+        }
 
         &:hover {
             color: #fff;
-            background: $button-color;
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                right: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $button-color;
+            }
         }
     }
+
 
     &--show-more {
         min-width: 280px;
@@ -95,6 +135,30 @@ $button-search-width: 106px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+
+        &:after {
+            content: none;
+        }
+
+        &:before {
+            top: auto;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+        }
+
+        &:hover {
+
+            &:before {
+                bottom: 0;
+                height: 100%;
+            }
+
+            .icon-arrow-down {
+                background-image: url(icon-arrow-down('fff'));
+            }
+        }
     }
 
 
@@ -105,6 +169,11 @@ $button-search-width: 106px;
         box-sizing: border-box;
         min-width: 180px;
         padding: 12px 26px;
+    }
+
+    &:hover:after {
+        left: #{calc(100% + 20px)};
+        transition: all .5s;
     }
 }
 
