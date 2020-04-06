@@ -30,6 +30,7 @@
     &__img {
         @include lg-block {
             top: -150px;
+            margin-bottom: -200px;
         }
         position: relative;
         z-index: -1;

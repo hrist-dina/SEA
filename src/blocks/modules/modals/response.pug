@@ -4,7 +4,7 @@ include ../../components/icon/icon
 .modal.js-modal(data-modal-type='response')
     +icon('cross', ['modal__close', 'js-modal-close'])
     .modal__inner
-        form(action='/html/json.php', method='post').form.modal__form.validator
+        form(action='/html/json.php', method='post').form.modal__form.validator.js-form-service
             .form-title Отправить отклик
             .form__body
                 .form__row
@@ -20,7 +20,7 @@ include ../../components/icon/icon
                     .form__full
                         +field-area('comment', 'Комментарий (необязательно)')
                         .form__file
-                            +field-file('files', 'Прикрепить файл')
+                            +field-file('files', 'Прикрепить файл')(data-validator-require='true')
 
             .__footer
                 .__button
