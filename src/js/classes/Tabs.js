@@ -31,8 +31,6 @@ export class Tabs extends ComponentBase {
             .children()
             .each((i, item) => {
                 const contentTab = $(item)
-                console.log(contentTab)
-                console.log(contentTab.data("tab-content"))
                 if (contentTab.data("tab-content") === tabType) {
                     contentTab.addClass("active")
                 } else {
