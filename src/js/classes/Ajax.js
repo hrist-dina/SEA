@@ -34,6 +34,30 @@ export class Ajax {
         return this.element.attr("action")
     }
 
+    get isFormData() {
+        return false
+    }
+
+    getOptions(method) {
+        let defaultOptions = {
+            method: method,
+            cache: false,
+            processData: false,
+            data: this.data,
+        }
+
+        if (this.isFormData) {
+            defaultOptions = {
+                ...defaultOptions,
+                contentType: false,
+                enctype: "multipart/form-data",
+            }
+        } else {
+            defaultOptions = { ...defaultOptions, dataType: "json" }
+        }
+        return defaultOptions
+    }
+
     init() {
         // Реализовать у дочернего класса
     }
@@ -63,13 +87,7 @@ export class Ajax {
     }
 
     ajax(method) {
-        $.ajax(this.url, {
-            method: method,
-            cache : false,
-            dataType: "json",
-            processData: false,
-            data: this.data,
-        })
+        $.ajax(this.url, this.getOptions(method))
             .done(this.done.bind(this))
             .fail(this.fail.bind(this))
     }

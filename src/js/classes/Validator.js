@@ -43,7 +43,6 @@ export default class Validator {
     }
 
     static isFile(input) {
-        console.log(input)
         return input.getAttribute("type") === "file"
     }
 

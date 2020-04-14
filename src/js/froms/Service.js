@@ -16,6 +16,14 @@ export class Service extends Ajax {
         this.initFileEvents()
     }
 
+    get url() {
+        return "/local/script/feedback.php"
+    }
+
+    get isFormData() {
+        return true
+    }
+
     get data() {
         let formData = new FormData(this.element[0])
 
