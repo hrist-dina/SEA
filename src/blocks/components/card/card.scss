@@ -1,11 +1,14 @@
+$cardOffset: 48px;
 .card {
-    @include size-lg(4);
-    @include size-sm(6);
-    @include size(12);
+    @include lg-block {
+        @include u-size(4, 12, $cardOffset);
+    }
     @include sm-block {
+        @include u-size(6, 12, $cardOffset);
         height: 520px;
         margin-bottom: 48px;
     }
+    @include u-size(12, 12, $cardOffset);
     display: inline-block;
     position: relative;
     max-width: 395px;
@@ -47,8 +50,11 @@
 
     &__list {
         &:not(.swiper-wrapper) {
-            @include row-flex;
-            justify-content: space-between;
+            @include u-row-flex($cardOffset);
+            @include lg-block {
+                justify-content: left;
+            }
+            justify-content: center;
         }
 
         &.swiper-wrapper {
@@ -113,6 +119,6 @@
     }
 
     &:not(.swiper-slide) {
-        @include col;
+        @include u-col($cardOffset);
     }
 }
