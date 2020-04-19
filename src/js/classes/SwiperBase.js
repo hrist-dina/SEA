@@ -29,6 +29,7 @@ export default class SwiperBase {
     bindOptions(options) {
         const defaultOptions = {
             slidesPerView: "auto",
+            watchOverflow: true,
         }
         this.options = { ...this.options, ...defaultOptions, ...options }
     }

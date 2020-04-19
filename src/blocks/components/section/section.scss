@@ -40,7 +40,11 @@
         margin-bottom: 40px;
 
         & .h1 {
+            @include sm-block {
+                word-break: inherit;
+            }
             text-align: center;
+            word-break: break-word;
         }
     }
 

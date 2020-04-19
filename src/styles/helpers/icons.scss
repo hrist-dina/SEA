@@ -76,6 +76,9 @@
         opacity: .5;
         cursor: not-allowed;
     }
+    &.swiper-button-lock {
+        display: none;
+    }
 }
 
 .icon-arrow-long-prev {

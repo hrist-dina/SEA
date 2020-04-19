@@ -9,6 +9,18 @@ class UiKit extends ComponentBase {
     init() {
         new Field()
         new Select()
+        new Common()
+    }
+}
+
+class Common {
+    constructor() {
+        this.init()
+    }
+    init() {
+        $(document)
+            .find(".text table")
+            .wrap($("<div class='table'>"))
     }
 }
 
