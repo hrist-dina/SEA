@@ -1,5 +1,5 @@
 import $ from "jquery"
-import { Ajax } from "%classes%/Ajax"
+import { Ajax, baseFeedbackUrl } from "%classes%/Ajax"
 import Validator from "%classes%/Validator"
 import { selectorModal, BaseModal } from "%classes%/BaseModal"
 import { formatBytes } from "%common%/formatters"
@@ -18,7 +18,7 @@ export class Service extends Ajax {
     }
 
     get url() {
-        return "/local/script/feedback.php"
+        return baseFeedbackUrl
     }
 
     get isFormData() {

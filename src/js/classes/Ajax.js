@@ -1,6 +1,8 @@
 import $ from "jquery"
 import { BaseModal, selectorModal } from "%classes%/BaseModal"
 
+export const baseFeedbackUrl = "/local/script/feedback.php"
+
 export class Ajax {
     constructor(selector) {
         this.selector = selector
@@ -113,15 +115,10 @@ export class Ajax {
     done(data) {
         this.hideLoader()
         // Реализовать у дочернего класса
-        if (data) {
-            return true
-        }
-        return false
+        return !!data
     }
 
-    fail(error) {
-        console.log("fail")
-        console.log(error)
+    fail() {
         this.hideLoader()
         // Реализовать у дочернего класса
 

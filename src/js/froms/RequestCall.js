@@ -1,5 +1,5 @@
 import $ from "jquery"
-import { Ajax } from "%classes%/Ajax"
+import { Ajax, baseFeedbackUrl } from "%classes%/Ajax"
 import Validator from "%classes%/Validator"
 import { selectorModal, BaseModal } from "%classes%/BaseModal"
 
@@ -12,6 +12,10 @@ export class RequestCall extends Ajax {
 
     validate() {
         return !new Validator(this.element).init()
+    }
+
+    get url() {
+        return baseFeedbackUrl
     }
 
     done(data) {

@@ -1,5 +1,5 @@
 import $ from "jquery"
-import { Ajax } from "%classes%/Ajax"
+import { Ajax, baseFeedbackUrl } from "%classes%/Ajax"
 import { selectorModal, BaseModal } from "%classes%/BaseModal"
 
 export const selectorSubscribe = ".js-form-subscribe"
@@ -7,6 +7,10 @@ export const selectorSubscribe = ".js-form-subscribe"
 export class Subscribe extends Ajax {
     constructor(selector = selectorSubscribe) {
         super(selector)
+    }
+
+    get url() {
+        return baseFeedbackUrl
     }
 
     done(data) {
