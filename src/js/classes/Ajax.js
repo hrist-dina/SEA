@@ -1,4 +1,5 @@
 import $ from "jquery"
+import { BaseModal, selectorModal } from "%classes%/BaseModal"
 
 export class Ajax {
     constructor(selector) {
@@ -62,11 +63,18 @@ export class Ajax {
         // Реализовать у дочернего класса
     }
 
+    needShowLoader() {
+        return true
+    }
+
     submit() {
         this.element.on("submit", e => {
             e.preventDefault()
             if (this.validate()) {
                 this.post()
+                if (this.needShowLoader()) {
+                    this.showLoader()
+                }
             } else {
                 console.log("validated - false")
             }
@@ -103,6 +111,7 @@ export class Ajax {
     }
 
     done(data) {
+        this.hideLoader()
         // Реализовать у дочернего класса
         if (data) {
             return true
@@ -111,8 +120,26 @@ export class Ajax {
     }
 
     fail(error) {
-        // Реализовать у дочернего класса
         console.log("fail")
         console.log(error)
+        this.hideLoader()
+        // Реализовать у дочернего класса
+
+        if (window.location.hostname === "localhost") {
+            //TODO:: Нужно для демонстрации верстки
+            BaseModal.closeCurrent($(this.element).closest(selectorModal))
+            BaseModal.openByType("success-callback")
+        }
+    }
+
+    getSubmitButton() {
+        return this.element.find("button[type=submit]")
+    }
+    showLoader() {
+        this.getSubmitButton().addClass("button--loading")
+    }
+
+    hideLoader() {
+        this.getSubmitButton().removeClass("button--loading")
     }
 }

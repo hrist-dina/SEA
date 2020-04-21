@@ -6,6 +6,7 @@ import { CardsDetail } from "%components%/cards-detail/cards-detail"
 import Map from "%components%/map/map"
 import { Tabs, selectorTabs } from "%classes%/Tabs"
 import Mask from "%classes%/Mask"
+import Logo3d from "%components%/logo-3d/logo-3d"
 
 $(() => {
     new Card()
@@ -14,6 +15,7 @@ $(() => {
     new CardsDetail()
     new Map()
     new Mask().init()
+    new Logo3d()
     $(document)
         .find(selectorTabs)
         .each((i, item) => {

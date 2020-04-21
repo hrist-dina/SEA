@@ -18,4 +18,14 @@
     & svg:hover .s {
         transform: translateY(-260px);
     }
+
+    &.active {
+        & svg .a {
+            transform: translateY(480px);
+        }
+
+        & svg .s {
+            transform: translateY(-260px);
+        }
+    }
 }

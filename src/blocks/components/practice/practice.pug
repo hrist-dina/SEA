@@ -2,7 +2,7 @@ include ../section/section
 include ../ui-kit/ui-kit
 
 mixin practice
-    .practice
+    a(href='#').practice
         .__header
             .__title Прокурорская проверка бутика мирового бренда
             .__options
@@ -18,7 +18,7 @@ mixin practice
                     b название
         .__footer
             .__link
-                +button-link('Подробнее', 'nav', '#')
+                +button('Подробнее', 'nav')
 
 
 mixin practice-section

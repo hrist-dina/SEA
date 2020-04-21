@@ -7,9 +7,11 @@
         padding: 32px;
     }
     box-sizing: border-box;
+    display: block;
     padding: 16px;
     background: #f7f7f7;
     margin-bottom: 48px;
+    text-decoration: none;
 
     &__title {
         @include md-block {
@@ -22,6 +24,7 @@
         font-family: $title-font;
         color: #233d63;
         margin-bottom: 15px;
+        text-decoration: none;
     }
 
     &__header {
@@ -44,6 +47,7 @@
             line-height: 24px;
             color: #64697a;
             margin-bottom: 5px;
+            text-decoration: none;
             &:last-child {
                 margin-bottom: 0;
             }

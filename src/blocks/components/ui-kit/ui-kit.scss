@@ -21,11 +21,9 @@ $button-search-width: 106px;
     cursor: pointer;
 
     &:disabled {
-        opacity: .3;
+        opacity: 0.3;
         cursor: not-allowed;
     }
-
-
 
     &:after {
         content: "";
@@ -35,7 +33,7 @@ $button-search-width: 106px;
         width: 70px;
         height: 120px;
         transform: rotate(20deg);
-        background: rgba(255, 255, 255, .7);
+        background: rgba(255, 255, 255, 0.7);
     }
 
     &--full {
@@ -90,7 +88,6 @@ $button-search-width: 106px;
             }
         }
     }
-
 
     &--show-more {
         min-width: 280px;
@@ -149,18 +146,16 @@ $button-search-width: 106px;
         }
 
         &:hover {
-
             &:before {
                 bottom: 0;
                 height: 100%;
             }
 
             .icon-arrow-down {
-                background-image: url(icon-arrow-down('fff'));
+                background-image: url(icon-arrow-down("fff"));
             }
         }
     }
-
 
     &--search-result {
         @include sm-block {
@@ -173,10 +168,42 @@ $button-search-width: 106px;
 
     &:hover:after {
         left: #{calc(100% + 20px)};
-        transition: all .5s;
+        transition: all 0.5s;
+    }
+
+    &--loading {
+        position: relative;
+        cursor: wait;
+        z-index: 0;
+        color: transparent;
+
+        &:before {
+            $size: 24px;
+            $border-color: #fff;
+            $border-weight: 2px;
+            $offset: ($size + $border-weight) * 0.5;
+
+            content: "";
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: $size;
+            height: $size;
+            margin: auto;
+            border: rgba(255, 255, 255, .25) $border-weight solid;
+            animation: animation-rotate 750ms linear infinite;
+            border-radius: $size;
+            border-top-color: $border-color;
+        }
+
+        &:hover:after {
+            content: none;
+        }
     }
 }
-
 
 .link-icon {
     font-size: 14px;
@@ -205,7 +232,6 @@ $button-search-width: 106px;
         border-bottom-color: transparent;
     }
 }
-
 
 .field-select, .field {
     box-sizing: border-box;
@@ -257,7 +283,7 @@ $button-search-width: 106px;
         line-height: 24px;
         color: $base-color;
 
-        &[type=number]:not(:focus)::-webkit-inner-spin-button, &[type=number]:not(:focus)::-webkit-outer-spin-button {
+        &[type="number"]:not(:focus)::-webkit-inner-spin-button, &[type="number"]:not(:focus)::-webkit-outer-spin-button {
             margin: 0;
             -webkit-appearance: none;
         }
@@ -324,7 +350,6 @@ $button-search-width: 106px;
         }
     }
 
-
     &__data {
         width: #{calc(100% - 32px)};
     }
@@ -367,5 +392,11 @@ $button-search-width: 106px;
             margin: auto;
             @extend .icon-calendar;
         }
+    }
+}
+
+@include keyframes(animation-rotate) {
+    100% {
+        transform: rotate(360deg);
     }
 }

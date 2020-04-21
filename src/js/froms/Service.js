@@ -13,6 +13,7 @@ export class Service extends Ajax {
     }
 
     init() {
+        this.hasErrors = false
         this.initFileEvents()
     }
 
@@ -27,9 +28,9 @@ export class Service extends Ajax {
     get data() {
         let formData = new FormData(this.element[0])
 
-        this.files.forEach((item) => {
+        this.files.forEach(item => {
             formData.delete(item.name)
-            item.data.forEach((file) => {
+            item.data.forEach(file => {
                 formData.append(item.name, file)
             })
         })
@@ -37,7 +38,8 @@ export class Service extends Ajax {
     }
 
     validate() {
-        return !new Validator(this.element).init()
+        this.hasErrors = new Validator(this.element).init()
+        return !this.hasErrors
     }
 
     done(data) {
@@ -46,15 +48,7 @@ export class Service extends Ajax {
             BaseModal.closeCurrent($(this.element).closest(selectorModal))
             BaseModal.openByType("success-callback")
         }
-    }
-
-    fail(error) {
-        console.log("fail")
-        console.log(error)
-
-        //TODO:: Написать логику на бэке по обработке ошибок. То что ниже удалить!
-        BaseModal.closeCurrent($(this.element).closest(selectorModal))
-        BaseModal.openByType("success-callback")
+        this.hideLoader()
     }
 
     initFileEvents() {
@@ -80,9 +74,7 @@ export class Service extends Ajax {
     }
 
     findFiles(name) {
-        return this.files.filter(
-            fileItem => fileItem.name === name
-        )[0]
+        return this.files.filter(fileItem => fileItem.name === name)[0]
     }
 
     onChangeFile(e) {
@@ -107,7 +99,9 @@ export class Service extends Ajax {
         }
 
         this.renderFileList(this.findFiles(name).data, label)
-        this.validate()
+        if (!files.length || this.hasErrors) {
+            this.validate()
+        }
         return false
     }
 
@@ -130,12 +124,14 @@ export class Service extends Ajax {
         this.renderFileList(findData.data, label)
         if (!findData.data.length) {
             $(input).val("")
+            this.validate()
         }
-        this.validate()
     }
 
     renderFileList(files, label) {
-        const lisTemp = $(`<div class='field-file__list ${this.fileList.slice(1)}'></div>`)
+        const lisTemp = $(
+            `<div class='field-file__list ${this.fileList.slice(1)}'></div>`
+        )
         const list = label.siblings(lisTemp).length
             ? label.siblings(lisTemp)
             : lisTemp

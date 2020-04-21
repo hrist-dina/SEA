@@ -15,14 +15,6 @@ export class Subscribe extends Ajax {
             BaseModal.closeCurrent($(this.element).closest(selectorModal))
             BaseModal.openByType("success-subscribe")
         }
-    }
-
-    fail(error) {
-        console.log("fail")
-        console.log(error)
-
-        //TODO:: Написать логику на бэке по обработке ошибок. То что ниже удалить!
-        BaseModal.closeCurrent($(this.element).closest(selectorModal))
-        BaseModal.openByType("success-subscribe")
+        this.hideLoader()
     }
 }
