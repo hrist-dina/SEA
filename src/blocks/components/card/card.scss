@@ -56,14 +56,6 @@ $cardOffset: 48px;
             }
             justify-content: center;
         }
-
-        &.swiper-wrapper {
-
-            @include to($break_sm) {
-                box-sizing: border-box;
-                margin-left: 15px;
-            }
-        }
     }
 
     &__tags {
@@ -115,6 +107,14 @@ $cardOffset: 48px;
     &-slider {
         @include to($break_sm) {
             margin: 0 -15px;
+        }
+        &.swiper-container {
+            @include sm-block {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 

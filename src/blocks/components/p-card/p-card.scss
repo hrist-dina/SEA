@@ -72,11 +72,6 @@
             list-style: none;
             justify-content: space-between;
         }
-
-        &.swiper-wrapper {
-            margin-left: 15px;
-            margin-right: 15px;
-        }
     }
 
     &-slider {
@@ -88,6 +83,15 @@
 
         @include to($break_sm) {
             margin: 0 -15px;
+        }
+
+        &.swiper-container {
+            @include sm-block {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
 }
