@@ -89,6 +89,15 @@ $button-search-width: 106px;
         }
     }
 
+    &--white {
+        background-color: #fff;
+        z-index: 1;
+
+        &:before, &:after {
+            z-index: 0;
+        }
+    }
+
     &--show-more {
         min-width: 280px;
     }
@@ -152,6 +161,10 @@ $button-search-width: 106px;
             }
 
             .icon-arrow-down {
+                background-image: url(icon-arrow-down("fff"));
+            }
+
+            .icon-arrow-top {
                 background-image: url(icon-arrow-down("fff"));
             }
         }

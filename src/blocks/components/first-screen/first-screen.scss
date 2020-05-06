@@ -24,7 +24,11 @@
 
     &__data {
         @include xl-block {
-            max-width: 833px;
+            max-width: 800px;
+        }
+
+        @include to($break_xxl) {
+            max-width: 780px;
         }
 
         @include lg-block {
@@ -39,7 +43,7 @@
         }
 
         @include to($break_xxl) {
-            max-width: 600px;
+            max-width: 550px;
         }
 
         @include to($break_xl) {
@@ -47,16 +51,23 @@
             & .logo-3d {
                 height: auto;
                 & svg {
-                    height: 750px !important;
+                    height: 650px !important;
                 }
             }
         }
 
         @include to(30rem) {
             & .logo-3d svg {
-                height: 700px !important;
+                height: 600px !important;
             }
         }
+
+        @include to(27rem) {
+            & .logo-3d svg {
+                height: 505px !important;
+            }
+        }
+
 
         @include to(22rem) {
             & .logo-3d svg {
@@ -68,8 +79,27 @@
             position: absolute;
             top: 0;
             right: 0;
+
+            .logo-3d {
+                display: inline-block;
+                position: relative;
+                width: 100%;
+                max-width: 700px;
+                height: 1000px;
+                margin-left: auto;
+                padding-bottom: 100%;
+                vertical-align: top;
+                & > svg {
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                }
+            }
         }
         margin-bottom: -50px;
+        width: 100%;
     }
     
     &__title {

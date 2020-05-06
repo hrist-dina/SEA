@@ -141,6 +141,12 @@
     @include icon-bgc(icon-arrow-down());
 }
 
+.icon-arrow-top {
+    @include wh(20px,29px);
+    @include icon-bgc(icon-arrow-down());
+    @include rotate();
+}
+
 .icon-clip {
     @include wh(16px);
     @include icon-bgc(icon-clip());

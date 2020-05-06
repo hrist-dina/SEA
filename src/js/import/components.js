@@ -7,6 +7,7 @@ import Map from "%components%/map/map"
 import { Tabs, selectorTabs } from "%classes%/Tabs"
 import Mask from "%classes%/Mask"
 import Logo3d from "%components%/logo-3d/logo-3d"
+import { ScrollToUp } from "%classes%/ScrollToUp"
 
 $(() => {
     new Card()
@@ -16,6 +17,7 @@ $(() => {
     new Map()
     new Mask().init()
     new Logo3d()
+    new ScrollToUp()
     $(document)
         .find(selectorTabs)
         .each((i, item) => {
