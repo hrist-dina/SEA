@@ -84,8 +84,10 @@
     justify-content: center;
     &__item {
         @include md-block {
-            max-width: 194px;
+            width: #{calc(100% / 4 - 30px)};
+            max-width: 100%;
             margin-right: 30px;
+            margin-left: 0;
             &:last-child {
                 margin-right: 0;
             }
@@ -160,10 +162,16 @@
 
 
     &__title {
-        @include md-block {
+
+        @include from($break_tablet_content) {
             font-size: 22px;
             line-height: 35px;
             margin-top: 16px;
+        }
+        @include md-block {
+            font-size: 18px;
+            line-height: 28px;
+            margin-top: 14px;
         }
         font-size: 16px;
         line-height: 24px;

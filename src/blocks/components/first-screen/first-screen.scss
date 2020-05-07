@@ -1,18 +1,24 @@
 .first-screen {
+
+    @include from($break_tablet_content) {
+        padding-top: 85px;
+    }
+
     @include xl-block {
         min-height: 700px;
     }
 
     @include lg-block {
-        margin-right: 40px;
-        padding-top: 85px;
+        padding-top: 55px;
         padding-bottom: 42px;
     }
     box-sizing: border-box;
     position: relative;
+    max-width: 1920px;
+    min-height: 500px;
+    margin: auto;
     padding-top: 20px;
     padding-bottom: 20px;
-    min-height: 500px;
 
     &__inner {
         @include lg-block {
@@ -23,12 +29,18 @@
     }
 
     &__data {
-        @include xl-block {
+
+        @include from($break_xxl) {
+
             max-width: 800px;
         }
 
-        @include to($break_xxl) {
+        @include from($break_tablet_content) {
             max-width: 780px;
+        }
+
+        @include xl-block {
+            max-width: 650px;
         }
 
         @include lg-block {
@@ -98,15 +110,23 @@
                 }
             }
         }
-        margin-bottom: -50px;
         width: 100%;
+        margin-bottom: -50px;
+        margin-right: 40px;
     }
     
     &__title {
-        @include xl-block {
+
+        @include from($break_tablet_content) {
             font-size: 70px;
             line-height: 80px;
             margin-bottom: 24px;
+        }
+
+        @include xl-block {
+            font-size: 60px;
+            line-height: 70px;
+            margin-bottom: 15px;
         }
 
         @include lg-block {
@@ -129,8 +149,8 @@
             line-height: 32px;
         }
         width: 100%;
-        color: #4e5051;
         max-width: 400px;
+        color: #4e5051;
         font-size: 18px;
         line-height: 28px;
     }

@@ -34,8 +34,11 @@
     }
 
     &__title {
-        @include sm-block {
+        @include from($break_tablet_content) {
             margin-bottom: 64px;
+        }
+        @include sm-block {
+            margin-bottom: 48px;
         }
         margin-bottom: 40px;
 
@@ -68,9 +71,14 @@
     }
 
     & ~ & {
-        @include md-block {
+        @include from($break_tablet_content) {
             margin-top: 100px;
         }
-        margin-top: 60px;
+
+        @include md-block {
+            margin-top: 60px;
+        }
+
+        margin-top: 50px;
     }
 }
