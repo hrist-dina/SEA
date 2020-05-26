@@ -16,10 +16,13 @@ export default class Card extends SwiperBase {
             },
             breakpoints: {
                 // when window width is >= 580px
-                580: {
+                1290: {
                     spaceBetween: 48,
-                }
-            }
+                },
+                580: {
+                    spaceBetween: 32,
+                },
+            },
         })
     }
 }

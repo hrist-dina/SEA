@@ -16,10 +16,13 @@ export default class PCard extends SwiperBase {
             },
             breakpoints: {
                 // when window width is >= 580px
-                580: {
+                1290: {
                     spaceBetween: 60,
-                }
-            }
+                },
+                580: {
+                    spaceBetween: 40,
+                },
+            },
         })
     }
 }

@@ -97,8 +97,12 @@ $cardOffset: 48px;
     }
 
     &.swiper-slide {
-        @include sm-block {
+        @include from($break_tablet_content) {
             min-width: 395px;
+            max-width: 100%;
+        }
+        @include sm-block {
+            min-width: 320px;
             max-width: 100%;
         }
         max-width: 85%;
